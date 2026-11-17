@@ -1,0 +1,4320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DHWANI — Thread & Trend | India's Complete All-Age Fashion Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #94254b;
+  --primary-dark: #6e1735;
+  --primary-light: #fbebf0;
+  --accent-gold: #c68a35;
+  --accent-gold-light: #fef6ea;
+  --emerald: #147a54;
+  --emerald-light: #e8f7f0;
+  --ink: #1a171d;
+  --ink-secondary: #4f4752;
+  --muted: #7d7280;
+  --border: #eedee4;
+  --surface: #ffffff;
+  --bg: #fff9f6;
+  --bg-soft: #fcf1ed;
+  --card-shadow: 0 10px 30px rgba(110, 23, 53, 0.08);
+  --hover-shadow: 0 18px 40px rgba(110, 23, 53, 0.16);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 9999px;
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font-family: inherit; }
+button { cursor: pointer; border: none; background: none; }
+
+.container {
+  width: min(1280px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* TOPBAR */
+.topbar {
+  background: linear-gradient(90deg, #57122b, #872144, #57122b);
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.topbar-left, .topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.helpline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.18);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.helpline-badge a { color: #ffe394; }
+.helpline-badge a:hover { text-decoration: underline; }
+.topbar-highlight {
+  color: #ffde82;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.topbar-links a {
+  color: #f7e2e8;
+  transition: color 0.2s;
+  font-size: 12px;
+}
+.topbar-links a:hover { color: #fff; }
+
+/* HEADER & NAVBAR */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 249, 246, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(80, 20, 40, 0.04);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 74px;
+}
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-logo {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.brand-logo span {
+  color: var(--accent-gold);
+  font-size: 32px;
+}
+.brand-tagline {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  border-left: 2px solid var(--border);
+  padding-left: 10px;
+  display: none;
+}
+@media (min-width: 900px) {
+  .brand-tagline { display: block; }
+}
+
+/* NAV SEARCH */
+.nav-search {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+  display: none;
+}
+@media (min-width: 768px) {
+  .nav-search { display: block; }
+}
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 4px 8px 4px 16px;
+  transition: all 0.2s;
+}
+.search-input-wrap:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(148, 37, 75, 0.15);
+}
+.search-input-wrap input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+.search-input-wrap button {
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+.search-input-wrap button:hover {
+  background: var(--primary-dark);
+}
+
+/* NAV LINKS */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  transition: color 0.2s;
+  position: relative;
+  padding: 4px 0;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--primary);
+}
+.nav-link .badge-hot {
+  font-size: 9px;
+  background: #e23b4e;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: var(--radius-pill);
+  position: absolute;
+  top: -8px;
+  right: -18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 1024px) {
+  .nav-menu { display: none; }
+}
+
+/* NAV ACTIONS */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-pill);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s;
+  position: relative;
+}
+.action-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+.action-btn.cart-btn {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  padding: 0 16px;
+}
+.action-btn.cart-btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+.count-badge {
+  background: #ffc436;
+  color: #57122b;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  min-width: 18px;
+  text-align: center;
+}
+.mobile-menu-btn {
+  display: none;
+  font-size: 22px;
+  padding: 8px;
+}
+@media (max-width: 1024px) {
+  .mobile-menu-btn { display: block; }
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, rgba(63, 11, 28, 0.94), rgba(110, 23, 53, 0.82)),
+              url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
+  color: #fff;
+  padding: 70px 0 85px;
+  overflow: hidden;
+}
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 900px) {
+  .hero-wrapper { grid-template-columns: 1fr; text-align: center; }
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  color: #ffde82;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5.2vw, 64px);
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+.hero h1 span {
+  color: #ffe08a;
+  font-style: italic;
+}
+.hero p {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: #fce8ee;
+  max-width: 620px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+@media (max-width: 900px) {
+  .hero p { margin: 0 auto 28px; }
+}
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+@media (max-width: 900px) {
+  .hero-btns { justify-content: center; }
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: 14.5px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.2px;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-primary {
+  background: #f8be43;
+  color: #4a0d20;
+  box-shadow: 0 8px 24px rgba(248, 190, 67, 0.35);
+}
+.btn-primary:hover {
+  background: #ffd366;
+  box-shadow: 0 12px 28px rgba(248, 190, 67, 0.45);
+}
+.btn-secondary {
+  background: #ffffff;
+  color: var(--primary-dark);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.btn-outline {
+  border: 1.5px solid rgba(255,255,255,0.7);
+  color: #fff;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+.hero-usp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.hero-usp-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  text-align: left;
+}
+.hero-usp-card .usp-icon {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+.hero-usp-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.hero-usp-card p {
+  font-size: 12.5px;
+  color: #ffd8e2;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* AGE DISCOVERY SECTION */
+.section {
+  padding: 65px 0;
+}
+.section-title-wrap {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 35px;
+}
+.section-tag {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 3.8vw, 42px);
+  color: var(--primary-dark);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.section-desc {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* AGE GRID - 6 TILES FOR EVERY GROUP AGE */
+.age-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+@media (max-width: 1100px) {
+  .age-cards-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 650px) {
+  .age-cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.age-group-card {
+  position: relative;
+  height: 250px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  color: #fff;
+}
+.age-group-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,8,14,0.1) 20%, rgba(20,8,14,0.85) 100%);
+  z-index: 1;
+  transition: background 0.3s;
+}
+.age-group-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--hover-shadow);
+}
+.age-group-card:hover::before {
+  background: linear-gradient(180deg, rgba(20,8,14,0.15) 10%, rgba(110,23,53,0.92) 100%);
+}
+.age-group-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.age-group-card:hover img {
+  transform: scale(1.08);
+}
+.age-card-info {
+  position: relative;
+  z-index: 2;
+}
+.age-pill {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+.age-card-info h3 {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #fff;
+}
+.age-card-info p {
+  font-size: 12px;
+  color: #f7d7e0;
+  line-height: 1.35;
+  margin-bottom: 0;
+}
+
+/* RUNNING MARKET TRENDS TICKER */
+.trends-bar-section {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+}
+.trends-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.trends-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--primary-dark);
+}
+.trends-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+}
+.trend-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  transition: all 0.2s;
+}
+.trend-pill-btn:hover, .trend-pill-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(148, 37, 75, 0.22);
+}
+
+/* EXPLORE / CATALOG SECTION */
+.catalog-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.filter-box {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-bottom: 25px;
+}
+.filter-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+@media (max-width: 1024px) {
+  .filter-row { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 650px) {
+  .filter-row { grid-template-columns: 1fr; }
+}
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.field-group label {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ink-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.field-group input, .field-group select {
+  height: 44px;
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+  font-size: 13.5px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.field-group input:focus, .field-group select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(148, 37, 75, 0.1);
+}
+.catalog-stats-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 4px;
+}
+.active-filters-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* PRODUCT GRID */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+@media (max-width: 1100px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
+@media (max-width: 480px) {
+  .products-grid { grid-template-columns: 1fr; }
+}
+
+/* PRODUCT CARD */
+.product-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: var(--hover-shadow);
+}
+.product-thumb-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #f0e6eb;
+}
+.product-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-thumb {
+  transform: scale(1.06);
+}
+.badge-tag-wrap {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 2;
+}
+.trend-tag-badge {
+  background: var(--primary);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.age-badge {
+  background: rgba(26, 23, 29, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.wish-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(4px);
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.wish-btn:hover, .wish-btn.active {
+  background: #fff;
+  color: #e0245e;
+  transform: scale(1.1);
+}
+.cod-pill {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(20, 122, 84, 0.9);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* PRODUCT BODY */
+.product-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-category-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.product-rating {
+  color: var(--accent-gold);
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.product-title {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.35;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 42px;
+}
+.product-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.size-selector-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.size-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ink-secondary);
+}
+.size-chip {
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.size-chip.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+.curr-price {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+.orig-price {
+  font-size: 13.5px;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+.disc-percent {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--emerald);
+  background: var(--emerald-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.product-btn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.btn-card-details {
+  border: 1.5px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all 0.2s;
+}
+.btn-card-details:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.btn-card-cart {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.btn-card-cart:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(148, 37, 75, 0.3);
+}
+
+/* DESIGN STUDIO SECTION */
+.studio-section {
+  background: #fcf1ee;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.studio-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+@media (max-width: 990px) {
+  .studio-layout { grid-template-columns: 1fr; }
+}
+.studio-panel {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+}
+.studio-controls {
+  display: grid;
+  gap: 15px;
+}
+.model-quick-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 4px;
+}
+@media (max-width: 480px) {
+  .model-quick-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.model-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 6px;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ink-secondary);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.model-pill-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+.model-pill-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(148, 37, 75, 0.28);
+}
+.mannequin-display {
+  background: radial-gradient(circle at 50% 25%, #ffffff 0%, #faedea 60%, #eedcd8 100%);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px 20px;
+  position: relative;
+  box-shadow: var(--card-shadow);
+}
+.statue-indicator-badge {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1.5px solid var(--border);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(90, 20, 45, 0.08);
+}
+.statue-stage-tag {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+#fashionModel {
+  width: min(100%, 380px);
+  height: auto;
+  max-height: 500px;
+  filter: drop-shadow(0 16px 28px rgba(70, 15, 35, 0.22));
+  transition: all 0.3s ease;
+}
+.studio-meta-badges {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.studio-badge {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* CART & BILLING MODAL / DRAWER */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(22, 10, 16, 0.72);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  padding: 20px;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.open {
+  display: flex;
+}
+.modal-window {
+  background: var(--surface);
+  width: min(780px, 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-header {
+  padding: 20px 26px;
+  border-bottom: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+}
+.modal-header h2 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--primary-dark);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.modal-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  transition: 0.2s;
+}
+.modal-close-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.modal-body {
+  padding: 24px 26px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* CART LIST STYLING */
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.cart-item-card {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 16px;
+  padding: 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  align-items: center;
+}
+.cart-item-img {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: #f0e6eb;
+}
+.cart-item-info h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.cart-item-meta {
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--bg);
+  overflow: hidden;
+}
+.qty-btn {
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  transition: 0.15s;
+}
+.qty-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.qty-display {
+  font-size: 13px;
+  font-weight: 800;
+  padding: 0 8px;
+}
+.cart-item-price-side {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.cart-item-total {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+.cart-remove-btn {
+  color: #cf2c3f;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.cart-remove-btn:hover {
+  text-decoration: underline;
+}
+
+/* BILLING BREAKDOWN */
+.bill-summary-box {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-bottom: 22px;
+}
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--ink-secondary);
+}
+.bill-row.total-row {
+  border-top: 2px dashed var(--border);
+  padding-top: 12px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--primary-dark);
+}
+.coupon-input-wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.coupon-input-wrap input {
+  flex: 1;
+  height: 40px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.coupon-input-wrap button {
+  background: var(--ink);
+  color: #fff;
+  padding: 0 16px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 800;
+}
+
+/* BILLING FORM & COD PAYMENT SELECTOR */
+.checkout-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+@media (max-width: 600px) {
+  .checkout-form-grid { grid-template-columns: 1fr; }
+}
+.form-span-2 { grid-column: span 2; }
+@media (max-width: 600px) {
+  .form-span-2 { grid-column: span 1; }
+}
+
+.payment-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+@media (max-width: 600px) {
+  .payment-options-grid { grid-template-columns: 1fr; }
+}
+.pay-option-card {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  background: var(--surface);
+  transition: all 0.2s;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.pay-option-card:hover, .pay-option-card.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+.pay-option-card input[type="radio"] {
+  accent-color: var(--primary);
+  margin-top: 4px;
+}
+.pay-title {
+  font-weight: 800;
+  font-size: 14.5px;
+  color: var(--primary-dark);
+  margin-bottom: 3px;
+}
+.pay-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* FLOATING WIDGETS & TOAST */
+.floating-support-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #128c7e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(18, 140, 126, 0.4);
+  transition: all 0.25s;
+}
+.floating-support-btn:hover {
+  background: #0d7064;
+  transform: translateY(-3px) scale(1.02);
+  color: #fff;
+}
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: #25121b;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.3);
+  z-index: 110;
+  transform: translateY(120px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-left: 4px solid var(--accent-gold);
+}
+.toast.show { transform: translateY(0); }
+
+/* FOOTER */
+footer {
+  background: #2c0e1b;
+  color: #f7dce5;
+  padding: 60px 0 25px;
+  border-top: 4px solid var(--accent-gold);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 35px;
+  margin-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 550px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+.footer-brand h2 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.footer-brand p {
+  font-size: 13.5px;
+  color: #e5bfcd;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 320px;
+}
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  margin-bottom: 8px;
+  color: #ffe18b;
+  font-weight: 700;
+}
+footer h4 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+footer a {
+  display: block;
+  color: #f1cedb;
+  font-size: 13.5px;
+  margin-bottom: 9px;
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: #ffde82;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+  color: #cfb2be;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* SUCCESS RECEIPT */
+.receipt-card {
+  border: 2px dashed #147a54;
+  background: #f1fcf6;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.receipt-icon {
+  font-size: 48px;
+  color: #147a54;
+  margin-bottom: 10px;
+}
+.receipt-id {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 800;
+  color: #147a54;
+  background: #e0f6ec;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOPBAR: TEMPORARY INDIAN HELPLINE & WHATSAPP SUPPORT -->
+<div class="topbar">
+  <div class="container topbar-content">
+    <div class="topbar-left">
+      <span class="helpline-badge">
+        📞 Customer Helpline: <a href="tel:+919876543210">+91 98765 43210</a> (Mon–Sun 9AM–9PM IST)
+      </span>
+      <span class="helpline-badge" style="background: rgba(18,140,126,0.3);">
+        💬 WhatsApp: <a href="https://wa.me/919876543210?text=Hi%20Dhwani%20Fashion%2C%20I%20have%20an%20order%20query" target="_blank">+91 98765 43210</a>
+      </span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-highlight">✨ Cash On Delivery (COD) Available All Over India</span>
+      <div class="topbar-links">
+        <a href="#supportModal" onclick="openSupportModal(); return false;">Toll-Free: 1800-200-8899</a> ·
+        <a href="#supportModal" onclick="openSupportModal(); return false;">Track Order</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY HEADER & NAVIGATION -->
+<header>
+  <div class="container navbar">
+    <div class="brand-group">
+      <a class="brand-logo" href="#home">
+        DHWANI <span>✦</span>
+      </a>
+      <span class="brand-tagline">Thread & Trend · Personal Fashion Studio</span>
+    </div>
+
+    <!-- Quick Search Bar -->
+    <div class="nav-search">
+      <form id="globalSearchForm" onsubmit="event.preventDefault(); applySearch();">
+        <div class="search-input-wrap">
+          <span style="color:var(--muted); margin-right:6px;">🔍</span>
+          <input id="globalSearchInput" type="text" placeholder="Search kurtas, baggy cargos, sarees, kids, oversized tees..." aria-label="Search catalog">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-menu" aria-label="Main Store Navigation">
+      <a class="nav-link" href="#explore">Shop All</a>
+      <a class="nav-link" href="#age-sections">Age Edit <span class="badge-hot">0-100Y</span></a>
+      <a class="nav-link" href="#trending">Running Trends</a>
+      <a class="nav-link" href="#studio">Design Studio</a>
+      <a class="nav-link" href="#supportModal" onclick="openSupportModal(); return false;">Help & Sizing</a>
+    </nav>
+
+    <!-- Nav Actions -->
+    <div class="nav-actions">
+      <button class="action-btn" id="wishlistHeaderBtn" onclick="openWishlistModal()" title="View Wishlist">
+        <span>♡</span>
+        <span class="count-badge" id="wishCount">0</span>
+      </button>
+
+      <button class="action-btn cart-btn" id="cartHeaderBtn" onclick="openCartModal()" title="View Shopping Cart">
+        <span>🛍️ Bag</span>
+        <span class="count-badge" id="cartCount">0</span>
+        <span style="font-size:12px; margin-left:3px;" id="cartTotalHeader">₹0</span>
+      </button>
+
+      <button class="action-btn mobile-menu-btn" onclick="toggleMobileSearch()" title="Search">
+        🔍
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION: USER FRIENDLY, WARM, CONTEMPORARY INDIAN E-COMMERCE -->
+<main id="home">
+  <section class="hero">
+    <div class="container hero-wrapper">
+      <div>
+        <div class="hero-tag">🔥 Trending Market Fashion · All Generations</div>
+        <h1>Clothes for Every Age, <span>Every Story</span>, and Every Occasion.</h1>
+        <p>Discover India's vibrant fashion market in one place: from viral Gen-Z baggy streetwear to regal wedding sarees, playful kidswear, tailored workwear, and breathable comfort apparel for seniors.</p>
+        
+        <div class="hero-btns">
+          <a class="btn btn-primary" href="#explore">🛍️ Explore All Collections (₹)</a>
+          <a class="btn btn-secondary" href="#studio">🎨 Interactive Design Studio</a>
+          <a class="btn btn-outline" href="#age-sections">Browse by Age Group →</a>
+        </div>
+      </div>
+
+      <div class="hero-usp-grid">
+        <div class="hero-usp-card">
+          <div class="usp-icon">🚚</div>
+          <h4>Cash on Delivery (COD)</h4>
+          <p>Pay safely in cash or UPI at your doorstep anywhere in India.</p>
+        </div>
+        <div class="hero-usp-card">
+          <div class="usp-icon">🇮🇳</div>
+          <h4>Fair Indian Rupee (₹) Pricing</h4>
+          <p>Direct manufacturer prices, transparent taxes & genuine festive discounts.</p>
+        </div>
+        <div class="hero-usp-card">
+          <div class="usp-icon">👶➔👴</div>
+          <h4>Ages 0 to 100+ Years</h4>
+          <p>Specialized fits for infants, kids, teens, adults, and graceful golden age.</p>
+        </div>
+        <div class="hero-usp-card">
+          <div class="usp-icon">📞</div>
+          <h4>Dedicated Helpline Support</h4>
+          <p>Call or WhatsApp +91 98765 43210 for instant sizing assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGE GROUP DISCOVERY: CLOTH OPTION FOR EACH AND EVERY GROUP AGE -->
+  <section class="section" id="age-sections" style="background:#fff;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Inclusive Sizing & Style</span>
+        <h2 class="section-title">Fashion Curated for Every Age Group</h2>
+        <p class="section-desc">From newborn baby softness to teen street aesthetic and gentle senior comfort wear, click an age group to see dedicated styles.</p>
+      </div>
+
+      <div class="age-cards-grid">
+        <!-- 0-2 Years: Babies & Toddlers -->
+        <div class="age-group-card" onclick="filterByAge('0-2')" title="View Baby & Toddler Clothes">
+          <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80" alt="Babies & Toddlers Fashion">
+          <div class="age-card-info">
+            <span class="age-pill">0–2 Years</span>
+            <h3>Infants & Toddlers</h3>
+            <p>Muslin jhablas, soft rompers, onesies & gentle cottons</p>
+          </div>
+        </div>
+
+        <!-- 3-12 Years: Kids -->
+        <div class="age-group-card" onclick="filterByAge('3-12')" title="View Kids Fashion">
+          <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=600&q=80" alt="Kids Fashion">
+          <div class="age-card-info">
+            <span class="age-pill">3–12 Years</span>
+            <h3>Kids Club</h3>
+            <p>Festive kurtas, party frocks, dungarees & playtime sets</p>
+          </div>
+        </div>
+
+        <!-- 13-19 Years: Teens & Gen-Z -->
+        <div class="age-group-card" onclick="filterByAge('13-19')" title="View Teen & Gen-Z Trends">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Teen Fashion">
+          <div class="age-card-info">
+            <span class="age-pill">13–19 Years</span>
+            <h3>Teens & Gen-Z</h3>
+            <p>Parachute cargos, anime hoodies, crop sets & oversized tees</p>
+          </div>
+        </div>
+
+        <!-- 20-35 Years: Young Adults -->
+        <div class="age-group-card" onclick="filterByAge('20-35')" title="View Young Adult Outfits">
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80" alt="Young Adults Fashion">
+          <div class="age-card-info">
+            <span class="age-pill">20–35 Years</span>
+            <h3>Young Adults</h3>
+            <p>Chikankari kurtas, party slips, gym fits & clubwear</p>
+          </div>
+        </div>
+
+        <!-- 36-59 Years: Middle Age / Prime -->
+        <div class="age-group-card" onclick="filterByAge('36-59')" title="View Prime & Modern Classics">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Middle Age Classics">
+          <div class="age-card-info">
+            <span class="age-pill">36–59 Years</span>
+            <h3>Prime Classics</h3>
+            <p>Linen shirts, pure silk sarees, tailored blazers & ethnic sets</p>
+          </div>
+        </div>
+
+        <!-- 60-100 Years: Seniors / Golden Age -->
+        <div class="age-group-card" onclick="filterByAge('60-100')" title="View Senior Comfort Wear">
+          <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=600&q=80" alt="Senior Comfort Fashion">
+          <div class="age-card-info">
+            <span class="age-pill">60–100 Years</span>
+            <h3>Golden Elegance</h3>
+            <p>Pure khadi kurtas, magnetic button shirts & breathable dhotis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RUNNING IN THE MARKET: TRENDS FAST FILTER STRIP -->
+  <section class="trends-bar-section" id="trending">
+    <div class="container">
+      <div class="trends-bar-header">
+        <div class="trends-title">
+          <span>🔥</span> Running Trends in the Market Today:
+        </div>
+        <span style="font-size:12.5px; color:var(--muted);">Tap any trend to filter instantly</span>
+      </div>
+
+      <div class="trends-scroll" id="trendChipsContainer">
+        <button class="trend-pill-btn active" onclick="filterByTrend('all', this)">⭐ All Clothes</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Streetwear', this)">🛹 Viral Streetwear & Baggy</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Ethnic', this)">👑 Lucknowi & Festive Ethnic</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Saree', this)">🥻 Trending Sarees & Lehengas</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Linen', this)">🌿 Pure Washed Linen</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Co-ord', this)">✨ Aesthetic Co-ord Sets</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Kids', this)">🧸 Cute Baby & Kids Market</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Adaptive', this)">👵 Easy-Dress Senior Wear</button>
+        <button class="trend-pill-btn" onclick="filterByTrend('Activewear', this)">🏃 Gym & Athleisure</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG & EXPLORER: MAXIMUM CHOICE FOR SHOPPING CUSTOMERS -->
+  <section class="section catalog-section" id="explore">
+    <div class="container">
+      <div class="section-title-wrap" style="margin-bottom: 25px;">
+        <span class="section-tag">Huge Variety & Best Indian Pricing</span>
+        <h2 class="section-title">The Complete Fashion Market Catalogue</h2>
+        <p class="section-desc">More choices than ever. Filter by age group, market trend, occasion, fabric, price in ₹, and gender.</p>
+      </div>
+
+      <!-- Advanced Filters Bar -->
+      <div class="filter-box">
+        <div class="filter-row">
+          <!-- Text Search -->
+          <div class="field-group">
+            <label for="catalogSearch">Search Product / Style</label>
+            <input id="catalogSearch" type="search" placeholder="e.g. Kurta, Cargo, Blazer, Silk...">
+          </div>
+
+          <!-- Age Filter -->
+          <div class="field-group">
+            <label for="ageDropdown">Age Group</label>
+            <select id="ageDropdown" onchange="renderCatalog()">
+              <option value="">All Age Groups (0–100Y)</option>
+              <option value="0-2">0–2 Years (Babies / Toddlers)</option>
+              <option value="3-12">3–12 Years (Kids)</option>
+              <option value="13-19">13–19 Years (Teens / Gen-Z)</option>
+              <option value="20-35">20–35 Years (Young Adults)</option>
+              <option value="36-59">36–59 Years (Middle Age)</option>
+              <option value="60-100">60–100 Years (Seniors / Golden Age)</option>
+            </select>
+          </div>
+
+          <!-- Gender / Audience -->
+          <div class="field-group">
+            <label for="audienceDropdown">Audience</label>
+            <select id="audienceDropdown" onchange="renderCatalog()">
+              <option value="">Everyone (Men, Women, Kids)</option>
+              <option value="Women">Women</option>
+              <option value="Men">Men</option>
+              <option value="Girls">Girls</option>
+              <option value="Boys">Boys</option>
+              <option value="Unisex">Gender-Neutral / Unisex</option>
+            </select>
+          </div>
+
+          <!-- Category -->
+          <div class="field-group">
+            <label for="categoryDropdown">Fashion Category</label>
+            <select id="categoryDropdown" onchange="renderCatalog()">
+              <option value="">All Categories</option>
+              <option value="Ethnic">Ethnic & Festive Wear</option>
+              <option value="Everyday">Everyday & Casuals</option>
+              <option value="Streetwear">Streetwear & Baggy</option>
+              <option value="Formal">Office & Formal Wear</option>
+              <option value="Party">Party & Evening</option>
+              <option value="Activewear">Activewear & Gym</option>
+              <option value="Loungewear">Loungewear & Nightwear</option>
+              <option value="Adaptive">Senior & Adaptive Wear</option>
+              <option value="Outerwear">Jackets & Coats</option>
+            </select>
+          </div>
+
+          <!-- Price Max Filter -->
+          <div class="field-group">
+            <label for="priceMax">Max Price (₹)</label>
+            <select id="priceMax" onchange="renderCatalog()">
+              <option value="">Any Budget</option>
+              <option value="999">Under ₹999</option>
+              <option value="1499">Under ₹1,499</option>
+              <option value="2499">Under ₹2,499</option>
+              <option value="4999">Under ₹4,999</option>
+            </select>
+          </div>
+
+          <!-- Clear Button -->
+          <div class="field-group">
+            <label>&nbsp;</label>
+            <button class="btn btn-outline" style="color:var(--primary-dark); border-color:var(--primary); height:44px; padding:0 16px;" onclick="resetAllFilters()">Clear Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Stats Bar -->
+      <div class="catalog-stats-bar">
+        <div>
+          <span style="font-weight: 800; font-size: 16px;" id="itemCountDisplay">Showing all 36 items</span>
+          <span style="color: var(--muted); font-size: 13px;" id="activeFilterSummary"> · Instant Dispatch · Cash on Delivery</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:12.5px; font-weight:700; color:var(--ink-secondary);">Sort By:</span>
+          <select id="sortDropdown" onchange="renderCatalog()" style="height:36px; border:1px solid var(--border); border-radius:6px; padding:0 8px; font-size:13px;">
+            <option value="trending">🔥 Market Trending First</option>
+            <option value="low">Price: Low to High (₹)</option>
+            <option value="high">Price: High to Low (₹)</option>
+            <option value="rating">Highest Customer Rated</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be dynamically populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DESIGN STUDIO: PERSONAL FASHION STUDIO WITH INR PRICING -->
+  <section class="section studio-section" id="studio">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Custom Tailoring & Boutique Mannequin Studio</span>
+        <h2 class="section-title">Design Your Signature Outfit</h2>
+        <p class="section-desc">Select an actual display mannequin statue for Male, Female, or Kids. Customize real tailored silhouettes, fabrics, prints, sleeves, and colors with live fitting reflection!</p>
+      </div>
+
+      <div class="studio-layout">
+        <!-- Controls Panel -->
+        <div class="studio-panel">
+          <div class="studio-controls">
+            <div class="field-group">
+              <label for="studioProjectName">Design Project Name</label>
+              <input id="studioProjectName" value="Royal Festive Anarkali" maxlength="40">
+            </div>
+
+            <!-- Quick Statue Selector Pills -->
+            <div class="field-group">
+              <label>Choose Display Mannequin Statue</label>
+              <div class="model-quick-selector">
+                <button type="button" class="model-pill-btn" id="pill-man" onclick="selectStudioModel('man')">👨 Male</button>
+                <button type="button" class="model-pill-btn active" id="pill-woman" onclick="selectStudioModel('woman')">👩 Female</button>
+                <button type="button" class="model-pill-btn" id="pill-kid" onclick="selectStudioModel('kid')">🧒 Kids</button>
+                <button type="button" class="model-pill-btn" id="pill-senior" onclick="selectStudioModel('senior')">👴 Senior</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="studioModel">Model Age Category</label>
+              <select id="studioModel" onchange="onStudioModelChange(this.value)">
+                <option value="woman">Adult Woman (20–55Y) · Female Statue</option>
+                <option value="man">Adult Man (20–60Y) · Male Statue</option>
+                <option value="kid">Kid / Toddler (3–12Y) · Kid Statue</option>
+                <option value="teen_girl">Teen Girl (13–19Y) · Female Statue</option>
+                <option value="teen_boy">Teen Boy (13–19Y) · Male Statue</option>
+                <option value="senior">Senior Elegance (60+Y) · Senior Statue</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="studioGarment">Tailored Garment Type</label>
+              <select id="studioGarment" onchange="updateStudioMannequin()">
+                <!-- Populated dynamically based on chosen statue model -->
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="studioPattern">Fabric Print & Style</label>
+              <select id="studioPattern" onchange="updateStudioMannequin()">
+                <option value="Plain">Solid Regal Color</option>
+                <option value="Floral">Jaipuri Sanganeri Floral Print</option>
+                <option value="Stripes">Minimalist Contemporary Stripes</option>
+                <option value="Checks">Madras Handloom Checks</option>
+                <option value="Embroidery">Zari & Chikankari Embroidery</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="studioSleeve">Sleeve Styling</label>
+              <select id="studioSleeve" onchange="updateStudioMannequin()">
+                <option value="long">Full Sleeve Elegance</option>
+                <option value="threequarter">Three-Quarter (3/4th) Cut</option>
+                <option value="short">Short Comfort Sleeve</option>
+                <option value="sleeveless">Sleeveless Chic</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="studioFabric">Fabric Selection</label>
+              <select id="studioFabric" onchange="updateStudioMannequin()">
+                <option value="Mulberry Silk">Mulberry Chanderi Silk · Regal Drape</option>
+                <option value="Pure Linen">100% Washed Linen · Ultra Breathable</option>
+                <option value="Organic Cotton">Organic Indian Muslin Cotton · Cloud Soft</option>
+                <option value="Georgette">Lucknowi Georgette · Flowy & Light</option>
+                <option value="Khadi">Handspun Heritage Khadi · Eco Classic</option>
+              </select>
+            </div>
+
+            <!-- Indian Rupee Budget Slider -->
+            <div class="field-group">
+              <label for="studioBudget">Estimated Tailoring Budget: <strong id="studioBudgetText" style="color:var(--primary-dark); font-size:15px;">₹2,499</strong></label>
+              <input id="studioBudget" type="range" min="699" max="12999" step="100" value="2499" oninput="updateBudgetDisplay(this.value)">
+            </div>
+
+            <!-- Color Palette -->
+            <div class="field-group">
+              <label>Select Master Hue</label>
+              <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;" id="studioColorPicker">
+                <button type="button" class="color-btn active" style="width:32px; height:32px; border-radius:50%; background:#94254b; border:3px solid #fff; box-shadow:0 0 0 2px #94254b;" onclick="setStudioColor('#94254b', this)" title="Gulabi Rose"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#2c1538; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#2c1538', this)" title="Royal Jamun"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#145a43; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#145a43', this)" title="Mehendi Green"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#bd8531; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#bd8531', this)" title="Haldi Mustard"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#205282; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#205282', this)" title="Peacock Royal Blue"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#232026; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#232026', this)" title="Jet Black"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#f2e8dc; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#f2e8dc', this)" title="Ivory Cream"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#b91c1c; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#b91c1c', this)" title="Sindoor Red"></button>
+                <button type="button" class="color-btn" style="width:32px; height:32px; border-radius:50%; background:#0d9488; border:3px solid #fff; box-shadow:0 0 0 1px #ddd;" onclick="setStudioColor('#0d9488', this)" title="Teal Emerald"></button>
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div class="field-group">
+              <label for="studioNotes">Custom Measurements & Tailor Notes</label>
+              <textarea id="studioNotes" rows="2" style="border:1.5px solid var(--border); border-radius:var(--radius-sm); padding:10px; font-size:12.5px;" placeholder="Add chest/waist in inches, fall-pico, lining requirements, deep pockets, or magnetic button requests..."></textarea>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:5px;">
+              <button class="btn btn-primary" type="button" onclick="addCustomStudioDesignToCart()" style="padding:10px 14px; font-size:13px;">
+                🛍️ Order Outfit (COD)
+              </button>
+              <button class="btn btn-outline" type="button" onclick="generateTailorBrief()" style="color:var(--primary-dark); border-color:var(--primary); padding:10px 14px; font-size:13px;">
+                📋 Tailor Brief
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SVG Live Mannequin Display -->
+        <div class="mannequin-display">
+          <div class="statue-indicator-badge" id="studioStatueIndicator">
+            ✦ 👩 Female Boutique Display Statue
+          </div>
+          <div class="statue-stage-tag">Showroom Pedestal</div>
+
+          <svg id="fashionModel" viewBox="0 0 440 600" role="img" aria-label="Visual display mannequin statue wearing chosen outfit">
+            <!-- Rendered dynamically by updateStudioMannequin() with actual realistic statue and outfit -->
+          </svg>
+
+          <!-- Studio Badges -->
+          <div class="studio-meta-badges">
+            <span class="studio-badge" id="studioBadgeType">Fluid Midi / Maxi Dress</span>
+            <span class="studio-badge" id="studioBadgeFabric">Mulberry Chanderi Silk</span>
+            <span class="studio-badge" id="studioBadgePrice">Est. ₹2,499 (Free COD)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REASSURANCE & CUSTOMER TESTIMONIALS -->
+  <section class="section" style="background:#fff;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Trusted Across India</span>
+        <h2 class="section-title">Loved by Families from Kashmir to Kanyakumari</h2>
+        <p class="section-desc">Over 85,000 satisfied Indian shoppers trust Dhwani for authentic fabric, genuine COD delivery, and true-to-size fits.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px;">
+          <div style="color:var(--accent-gold); font-size:18px; margin-bottom:10px;">★★★★★</div>
+          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.6; margin-bottom:14px;">"Ordered the Chikankari Kurta with Cash on Delivery to Jaipur. Delivered in 3 days! The embroidery is authentic and the fabric is extremely soft. Will order again!"</p>
+          <strong style="font-size:14px; color:var(--primary-dark);">— Ananya Sharma, Jaipur</strong>
+          <div style="font-size:11.5px; color:var(--muted);">Verified Buyer · Young Adult (26)</div>
+        </div>
+
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px;">
+          <div style="color:var(--accent-gold); font-size:18px; margin-bottom:10px;">★★★★★</div>
+          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.6; margin-bottom:14px;">"Finding pure khadi and comfortable loose clothes for my 72-year-old grandfather was always tough. The senior edit has magnetic closures and soft necklines. Outstanding initiative!"</p>
+          <strong style="font-size:14px; color:var(--primary-dark);">— Rohan Nair, Kochi</strong>
+          <div style="font-size:11.5px; color:var(--muted);">Verified Buyer · Senior Wardrobe</div>
+        </div>
+
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px;">
+          <div style="color:var(--accent-gold); font-size:18px; margin-bottom:10px;">★★★★★</div>
+          <p style="font-size:13.5px; color:var(--ink-secondary); line-height:1.6; margin-bottom:14px;">"My teenage son wanted those viral parachute cargo pants and I got an organic cotton dress for myself. Both arrived neatly packed with zero shipping charge. Customer care helped with sizing on WhatsApp immediately!"</p>
+          <strong style="font-size:14px; color:var(--primary-dark);">— Preeti Deshmukh, Pune</strong>
+          <div style="font-size:11.5px; color:var(--muted);">Verified Buyer · Family Order</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER WITH INDIAN HELPLINE AND STORE INFORMATION -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Col 1 -->
+      <div class="footer-brand">
+        <h2>DHWANI ✦</h2>
+        <p>India's comprehensive all-age personal fashion studio. Bringing market-leading street trends, festive luxury, and daily comfort to every household.</p>
+        <div class="footer-contact-item">
+          📞 <span>Helpline: +91 98765 43210</span>
+        </div>
+        <div class="footer-contact-item">
+          💬 <span>WhatsApp Order Desk: +91 98765 43210</span>
+        </div>
+        <div class="footer-contact-item">
+          ✉️ <span style="color:#fce4ec; font-weight:normal;">care@dhwanifashion.in</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Shop by Age -->
+      <div>
+        <h4>Shop by Age Group</h4>
+        <a href="#age-sections" onclick="filterByAge('0-2')">Infants & Babies (0–2 Yrs)</a>
+        <a href="#age-sections" onclick="filterByAge('3-12')">Kids Fashion (3–12 Yrs)</a>
+        <a href="#age-sections" onclick="filterByAge('13-19')">Teens & Gen-Z (13–19 Yrs)</a>
+        <a href="#age-sections" onclick="filterByAge('20-35')">Young Adults (20–35 Yrs)</a>
+        <a href="#age-sections" onclick="filterByAge('36-59')">Middle Age / Prime (36–59 Yrs)</a>
+        <a href="#age-sections" onclick="filterByAge('60-100')">Golden Age & Seniors (60+ Yrs)</a>
+      </div>
+
+      <!-- Col 3: Running Market Trends -->
+      <div>
+        <h4>Market Trending</h4>
+        <a href="#trending" onclick="filterByTrend('Streetwear')">Viral Parachute Cargos</a>
+        <a href="#trending" onclick="filterByTrend('Ethnic')">Lucknowi Chikankari Kurtas</a>
+        <a href="#trending" onclick="filterByTrend('Saree')">Organza & Banarasi Sarees</a>
+        <a href="#trending" onclick="filterByTrend('Linen')">Pure Washed Linen Shirts</a>
+        <a href="#trending" onclick="filterByTrend('Co-ord')">Aesthetic Lounge Co-ords</a>
+        <a href="#trending" onclick="filterByTrend('Adaptive')">Adaptive & Easy-Wear</a>
+      </div>
+
+      <!-- Col 4: Customer Services -->
+      <div>
+        <h4>Customer Care & Policies</h4>
+        <a href="#supportModal" onclick="openSupportModal(); return false;">Indian Sizing Guide (Inches/CM)</a>
+        <a href="#supportModal" onclick="openSupportModal(); return false;">Cash on Delivery (COD) Guide</a>
+        <a href="#supportModal" onclick="openSupportModal(); return false;">Easy 7-Day Doorstep Exchange</a>
+        <a href="#supportModal" onclick="openSupportModal(); return false;">Track Your Consignment</a>
+        <a href="#supportModal" onclick="openSupportModal(); return false;">GST Invoice & Billing Help</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 DHWANI — Thread & Trend Fashion Studio Pvt. Ltd. All Rights Reserved.</div>
+      <div style="display:flex; gap:16px;">
+        <span>🔒 256-Bit SSL Secured</span>
+        <span>🇮🇳 Proudly Made & Curated for India</span>
+        <span>💵 Cash on Delivery Supported</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP & INDIAN HELPLINE BUTTON -->
+<a class="floating-support-btn" href="https://wa.me/919876543210?text=Hello%20Dhwani%20Fashion%20Support!%20I%20need%20help%20with%20an%20order%20or%20sizing" target="_blank" title="Chat with Indian Support on WhatsApp">
+  <span>💬</span> +91 98765 43210
+</a>
+
+<!-- TOAST ALERT -->
+<div class="toast" id="appToast">Product added to your bag!</div>
+
+<!-- ==============================================
+     MODAL: SHOPPING CART & CHECKOUT BILLING
+============================================== -->
+<div class="modal-overlay" id="cartModal">
+  <div class="modal-window">
+    <div class="modal-header">
+      <h2><span>🛍️</span> Your Shopping Bag (<span id="modalCartCount">0</span> items)</h2>
+      <button class="modal-close-btn" onclick="closeCartModal()">✕</button>
+    </div>
+
+    <div class="modal-body" id="cartModalBody">
+      <!-- Empty state or cart content rendered by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ==============================================
+     MODAL: PRODUCT QUICK DETAILS
+============================================== -->
+<div class="modal-overlay" id="productDetailsModal">
+  <div class="modal-window" style="width: min(850px, 100%);">
+    <div class="modal-header">
+      <h2 id="detailTitle">Product Details</h2>
+      <button class="modal-close-btn" onclick="closeDetailsModal()">✕</button>
+    </div>
+
+    <div class="modal-body" id="detailModalBody">
+      <!-- Populated via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ==============================================
+     MODAL: WISHLIST
+============================================== -->
+<div class="modal-overlay" id="wishlistModal">
+  <div class="modal-window" style="width: min(650px, 100%);">
+    <div class="modal-header">
+      <h2><span>♡</span> Your Saved Wishlist (<span id="wishModalCount">0</span>)</h2>
+      <button class="modal-close-btn" onclick="closeWishlistModal()">✕</button>
+    </div>
+
+    <div class="modal-body" id="wishlistModalBody">
+      <!-- Populated via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ==============================================
+     MODAL: INDIAN CUSTOMER SUPPORT, HELPLINE & SIZING
+============================================== -->
+<div class="modal-overlay" id="supportModal">
+  <div class="modal-window">
+    <div class="modal-header">
+      <h2><span>📞</span> Indian Customer Care & Sizing Hub</h2>
+      <button class="modal-close-btn" onclick="closeSupportModal()">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <div style="background:#fdf2f4; border:1.5px solid var(--border); border-radius:var(--radius-md); padding:18px; margin-bottom:20px;">
+        <h3 style="color:var(--primary-dark); font-size:17px; margin-bottom:6px;">Temporary Dedicated Customer Support Helpline</h3>
+        <p style="font-size:13.5px; color:var(--ink-secondary); margin-bottom:12px;">Have questions about sizing, delivery, or Cash on Delivery? Our styling desk is available 7 days a week.</p>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+          <div style="background:#fff; padding:12px; border-radius:8px; border:1px solid var(--border);">
+            <div style="font-size:12px; color:var(--muted); font-weight:700;">PHONE HELPLINE</div>
+            <a href="tel:+919876543210" style="font-size:16px; font-weight:800; color:var(--primary); display:block; margin-top:2px;">+91 98765 43210</a>
+            <small style="color:var(--muted);">Toll-Free Backup: 1800-200-8899</small>
+          </div>
+          <div style="background:#fff; padding:12px; border-radius:8px; border:1px solid var(--border);">
+            <div style="font-size:12px; color:var(--muted); font-weight:700;">INSTANT WHATSAPP DESK</div>
+            <a href="https://wa.me/919876543210" target="_blank" style="font-size:16px; font-weight:800; color:#128c7e; display:block; margin-top:2px;">+91 98765 43210</a>
+            <small style="color:var(--muted);">Replies within 5 minutes</small>
+          </div>
+        </div>
+      </div>
+
+      <h4 style="font-size:16px; color:var(--primary-dark); margin-bottom:10px;">Standard Indian Size Measurement Chart (Inches)</h4>
+      <div style="overflow-x:auto; margin-bottom:20px;">
+        <table style="width:100%; border-collapse:collapse; font-size:12.5px; text-align:left;">
+          <thead>
+            <tr style="background:var(--primary-light); color:var(--primary-dark);">
+              <th style="padding:8px 12px; border:1px solid var(--border);">Size</th>
+              <th style="padding:8px 12px; border:1px solid var(--border);">Chest (Inches)</th>
+              <th style="padding:8px 12px; border:1px solid var(--border);">Waist (Inches)</th>
+              <th style="padding:8px 12px; border:1px solid var(--border);">Hip (Inches)</th>
+              <th style="padding:8px 12px; border:1px solid var(--border);">Best Suitable For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:8px 12px; border:1px solid var(--border); font-weight:800;">XS</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">32–34"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">26–28"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">34–36"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">Teens / Petite</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 12px; border:1px solid var(--border); font-weight:800;">S</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">36"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">30"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">38"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">Regular Slim</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 12px; border:1px solid var(--border); font-weight:800;">M</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">38"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">32"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">40"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">Standard Regular</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 12px; border:1px solid var(--border); font-weight:800;">L</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">40"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">34"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">42"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">Comfort Fit</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 12px; border:1px solid var(--border); font-weight:800;">XL</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">42"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">36"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">44"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">Relaxed Fit</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 12px; border:1px solid var(--border); font-weight:800;">XXL</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">44–46"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">38–40"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">46–48"</td>
+              <td style="padding:8px 12px; border:1px solid var(--border);">Plus Size Comfort</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:#e8f7f0; border:1px solid #b7e3cf; border-radius:var(--radius-sm); padding:14px; color:#147a54; font-size:13px; line-height:1.5;">
+        <strong>💵 Cash On Delivery (COD) Assurance:</strong> You can inspect the package upon arrival and pay cash or scan the delivery agent's UPI QR code. Easy 7-day hassle-free doorstep exchange available nationwide.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==============================================
+     MODAL: TAILOR DESIGN BRIEF GENERATOR
+============================================== -->
+<div class="modal-overlay" id="briefModal">
+  <div class="modal-window" style="width: min(650px, 100%);">
+    <div class="modal-header">
+      <h2><span>📋</span> Master Tailor Design Brief</h2>
+      <button class="modal-close-btn" onclick="closeBriefModal()">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">Copy this professional tailoring specification sheet and share it directly with your boutique tailor or master craftsman via WhatsApp.</p>
+      <textarea id="tailorBriefContent" rows="12" style="width:100%; border:1.5px solid var(--border); border-radius:var(--radius-sm); padding:14px; font-family:monospace; font-size:13px; background:#fffbf7; line-height:1.5; color:var(--ink);"></textarea>
+      
+      <div style="margin-top:16px; display:flex; gap:10px;">
+        <button class="btn btn-primary" onclick="copyBriefText()">📋 Copy Brief to Clipboard</button>
+        <button class="btn btn-outline" style="color:var(--primary-dark); border-color:var(--primary);" onclick="closeBriefModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==============================================
+     JAVASCRIPT: COMPREHENSIVE FASHION APP DATA & LOGIC
+============================================== -->
+<script>
+"use strict";
+
+/* ============================================================
+   1. RUNNING MARKET FASHION CATALOGUE: ALL AGES & LATEST TRENDS
+============================================================ */
+const products = [
+  // 1. GEN-Z / TEEN TRENDING
+  {
+    id: 1,
+    name: "Oversized Streetwear Acid-Wash Graphic Tee",
+    category: "Streetwear",
+    trend: "Streetwear",
+    occasion: "Casual",
+    audience: "Unisex",
+    ages: ["13-19", "20-35"],
+    fabric: "240 GSM Pure Cotton",
+    color: "Charcoal Black",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 899,
+    mrp: 1799,
+    rating: 4.8,
+    reviews: 1420,
+    badge: "🔥 Viral Streetwear",
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    description: "Heavyweight 240 GSM combed cotton dropped-shoulder tee with vintage acid wash and cyberpunk back print. Running hottest in college and Gen-Z streetwear."
+  },
+  {
+    id: 2,
+    name: "High-Waist Wide-Leg Parachute Cargo Pants",
+    category: "Streetwear",
+    trend: "Streetwear",
+    occasion: "Casual",
+    audience: "Women",
+    ages: ["13-19", "20-35"],
+    fabric: "Matte Technical Nylon",
+    color: "Sage Green",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    price: 1399,
+    mrp: 2799,
+    rating: 4.9,
+    reviews: 2180,
+    badge: "⚡ #1 Market Bestseller",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80",
+    description: "Viral parachute style baggy cargos with adjustable elastic toggle waist, knee pleats, and 6 functional utility pockets. Perfect match with crop tops."
+  },
+  {
+    id: 3,
+    name: "Lucknowi Chikankari Hand-Embroidered Georgette Kurta Set",
+    category: "Ethnic",
+    trend: "Ethnic",
+    occasion: "Festival",
+    audience: "Women",
+    ages: ["13-19", "20-35", "36-59"],
+    fabric: "Viscose Georgette",
+    color: "Powder Blue",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 1899,
+    mrp: 3999,
+    rating: 4.9,
+    reviews: 3240,
+    badge: "👑 Authentic Lucknowi",
+    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    description: "Intricate hand-embroidered Bakhiya & Phanda Chikankari work with matching slip inner and straight cigarette pants. Extremely popular for college, festive & puja wear."
+  },
+  {
+    id: 4,
+    name: "Floral Organza Saree with Designer Unstitched Blouse",
+    category: "Ethnic",
+    trend: "Saree",
+    occasion: "Wedding",
+    audience: "Women",
+    ages: ["20-35", "36-59", "60-100"],
+    fabric: "Premium Organza Silk",
+    color: "Blush Peach",
+    sizes: ["Free Size (5.5m Saree + 0.8m Blouse)"],
+    price: 2299,
+    mrp: 4999,
+    rating: 4.8,
+    reviews: 1890,
+    badge: "✨ Celebrity Wedding Trend",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    description: "Trending translucent organza silk saree with delicate floral digital prints, scalloped gota lace border, and heavy designer raw-silk blouse fabric."
+  },
+  {
+    id: 5,
+    name: "Men's 100% Pure Washed Linen Mandarin Collar Shirt",
+    category: "Everyday",
+    trend: "Linen",
+    occasion: "Casual",
+    audience: "Men",
+    ages: ["20-35", "36-59", "60-100"],
+    fabric: "100% Pure European Linen",
+    color: "Ivory White",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 1699,
+    mrp: 3299,
+    rating: 4.7,
+    reviews: 940,
+    badge: "🌿 100% Pure Linen",
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+    description: "Breathable natural linen shirt with grandad mandarin collar and roll-up sleeves. The essential luxury staple for Indian summers and beach vacations."
+  },
+  {
+    id: 6,
+    name: "Korean Aesthetic Pleated Tennis Skirt & Crop Top Co-ord",
+    category: "Party",
+    trend: "Co-ord",
+    occasion: "Party",
+    audience: "Women",
+    ages: ["13-19", "20-35"],
+    fabric: "Crepe Cotton Blend",
+    color: "Pastel Lavender",
+    sizes: ["XS", "S", "M", "L"],
+    price: 1199,
+    mrp: 2499,
+    rating: 4.8,
+    reviews: 1350,
+    badge: "⚡ K-Fashion Viral",
+    image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80",
+    description: "High-waist structured pleated A-line skirt with matching button-front short crop cardigan. Instant viral outfit for brunch, cafe aesthetics and parties."
+  },
+  {
+    id: 7,
+    name: "Indo-Western Men's Asymmetric Kurta with Dhoti Trousers",
+    category: "Ethnic",
+    trend: "Ethnic",
+    occasion: "Wedding",
+    audience: "Men",
+    ages: ["13-19", "20-35", "36-59"],
+    fabric: "Art Silk Jacquard",
+    color: "Royal Wine Red",
+    sizes: ["M", "L", "XL", "XXL"],
+    price: 2799,
+    mrp: 5999,
+    rating: 4.9,
+    reviews: 820,
+    badge: "👑 Sangeet & Groom Luxe",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80",
+    description: "Contemporary overlap front asymmetrical kurta with antique metal buttons paired with ready-to-wear tailored cowl dhoti pants. Head-turner for festive evenings."
+  },
+  {
+    id: 8,
+    name: "Senior Comfort 100% Khadi Kurta & Elasticated Pyjama Set",
+    category: "Adaptive",
+    trend: "Adaptive",
+    occasion: "Casual",
+    audience: "Men",
+    ages: ["36-59", "60-100"],
+    fabric: "Pure Handspun Khadi",
+    color: "Natural Ecru",
+    sizes: ["M", "L", "XL", "XXL", "3XL"],
+    price: 1299,
+    mrp: 2499,
+    rating: 4.9,
+    reviews: 1140,
+    badge: "👵 Senior Comfort Choice",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+    description: "Specially designed for senior gentlemen with soft tagless flat seams, generous relaxed cut, easy wooden buttons, and a wide elasticated waist drawstring pyjama."
+  },
+  {
+    id: 9,
+    name: "Senior Women's Easy-Dressing Magnetic Button Front Tunic",
+    category: "Adaptive",
+    trend: "Adaptive",
+    occasion: "Everyday",
+    audience: "Women",
+    ages: ["36-59", "60-100"],
+    fabric: "Ultra-Soft Modal Silk Blend",
+    color: "Dusty Plum",
+    sizes: ["M", "L", "XL", "XXL", "3XL"],
+    price: 1399,
+    mrp: 2699,
+    rating: 4.9,
+    reviews: 790,
+    badge: "♿ Adaptive Easy-Dress",
+    image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?auto=format&fit=crop&w=800&q=80",
+    description: "Designed for effortless dressing with hidden magnetic closures behind decorative faux buttons, generous side slits, and deep side pockets for medicines/glasses."
+  },
+  {
+    id: 10,
+    name: "Baby Bear Hooded Fleece Romper / Onesie (0–2 Yrs)",
+    category: "Everyday",
+    trend: "Kids",
+    occasion: "Casual",
+    audience: "Unisex",
+    ages: ["0-2"],
+    fabric: "100% Organic Cotton Fleece",
+    color: "Warm Biscuit Beige",
+    sizes: ["0-6M", "6-12M", "1-2Y"],
+    price: 699,
+    mrp: 1399,
+    rating: 4.9,
+    reviews: 1650,
+    badge: "🧸 Baby Hot Favorite",
+    image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=800&q=80",
+    description: "Ultra-soft baby romper with cute bear ears hood, front 2-way safety zipper with chin guard for easy diaper changes, and anti-scratch cuffs. Hypoallergenic."
+  },
+  {
+    id: 11,
+    name: "Girls Sequin Princess Party Ball Frock (3–12 Yrs)",
+    category: "Party",
+    trend: "Kids",
+    occasion: "Party",
+    audience: "Girls",
+    ages: ["3-12"],
+    fabric: "Soft Tulle & Satin Lining",
+    color: "Candy Pink",
+    sizes: ["3-4Y", "5-6Y", "7-8Y", "9-10Y", "11-12Y"],
+    price: 1299,
+    mrp: 2799,
+    rating: 4.8,
+    reviews: 1290,
+    badge: "✨ Birthday Special",
+    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=800&q=80",
+    description: "Dreamy multi-tiered flared party gown with gentle non-pricking sequin bodice, rear big bow belt, and soft 100% cotton inner lining against delicate skin."
+  },
+  {
+    id: 12,
+    name: "Boys Festive Kurta Pyjama with Nehru Bandi Jacket (3–12 Yrs)",
+    category: "Ethnic",
+    trend: "Kids",
+    occasion: "Festival",
+    audience: "Boys",
+    ages: ["3-12"],
+    fabric: "Silk Cotton Blend",
+    color: "Royal Mustard & Navy",
+    sizes: ["3-4Y", "5-6Y", "7-8Y", "9-10Y", "11-12Y"],
+    price: 1349,
+    mrp: 2699,
+    rating: 4.8,
+    reviews: 910,
+    badge: "🎉 Festive Must-Have",
+    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80",
+    description: "3-piece traditional festive set: comfortable round neck kurta, lightweight pyjama, and floral jacquard Modi/Nehru waistcoat jacket with pocket square."
+  },
+  {
+    id: 13,
+    name: "Teen Anime Graphic Baggy Pullover Hoodie",
+    category: "Streetwear",
+    trend: "Streetwear",
+    occasion: "Casual",
+    audience: "Unisex",
+    ages: ["13-19", "20-35"],
+    fabric: "320 GSM Brushed Cotton Fleece",
+    color: "Jet Black",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 1249,
+    mrp: 2499,
+    rating: 4.8,
+    reviews: 2400,
+    badge: "⚡ Gen-Z Trend",
+    image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+    description: "Ultra-heavyweight thermal brushed fleece hoodie with high-definition anime aesthetic artwork, kangaroo front pocket, and double-layered drawstring hood."
+  },
+  {
+    id: 14,
+    name: "Mulberry Banarasi Zari Woven Heritage Saree",
+    category: "Ethnic",
+    trend: "Saree",
+    occasion: "Wedding",
+    audience: "Women",
+    ages: ["20-35", "36-59", "60-100"],
+    fabric: "Pure Banarasi Silk Blend",
+    color: "Deep Royal Crimson",
+    sizes: ["Free Size (6.3m with Blouse)"],
+    price: 3499,
+    mrp: 7999,
+    rating: 4.9,
+    reviews: 1530,
+    badge: "👑 Royal Heirloom",
+    image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80",
+    description: "Classic Indian heritage woven saree with rich gold zari floral jaal, heavy pallu, and brocade border. A timeless treasure for brides, mothers, and festive rituals."
+  },
+  {
+    id: 15,
+    name: "Double-Breasted Italian Fit Power Blazer Suit",
+    category: "Formal",
+    trend: "Formal",
+    occasion: "Office",
+    audience: "Women",
+    ages: ["20-35", "36-59"],
+    fabric: "Poly-Viscose Crease Resistant",
+    color: "Midnight Navy",
+    sizes: ["XS", "S", "M", "L", "XL"],
+    price: 2999,
+    mrp: 5999,
+    rating: 4.8,
+    reviews: 860,
+    badge: "💼 Boardroom Chic",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+    description: "Sharp peak-lapel double-breasted blazer with matching straight tailored trousers. Precision cut for corporate leaders, conferences, and formal galas."
+  },
+  {
+    id: 16,
+    name: "Seamless High-Waist Gym Tights & Sports Bra Set",
+    category: "Activewear",
+    trend: "Activewear",
+    occasion: "Sports",
+    audience: "Women",
+    ages: ["13-19", "20-35", "36-59"],
+    fabric: "4-Way Stretch Spandex Microfibre",
+    color: "Teal Blue",
+    sizes: ["XS", "S", "M", "L"],
+    price: 1399,
+    mrp: 2999,
+    rating: 4.8,
+    reviews: 1720,
+    badge: "🏃 Squat Proof Workout",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+    description: "Sweat-wicking, non-see-through ribbed activewear set. Wide compressive waistband provides tummy control and maximum flexibility for yoga, running, and gym."
+  },
+  {
+    id: 17,
+    name: "Men's Slim Tapered Stretch Chino Trousers",
+    category: "Formal",
+    trend: "Formal",
+    occasion: "Office",
+    audience: "Men",
+    ages: ["20-35", "36-59", "60-100"],
+    fabric: "98% Cotton 2% Elastane",
+    color: "Khaki Camel",
+    sizes: ["30", "32", "34", "36", "38"],
+    price: 1299,
+    mrp: 2499,
+    rating: 4.7,
+    reviews: 1480,
+    badge: "⭐ Daily Work Essential",
+    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80",
+    description: "Smart casual flexi-waist chinos that seamlessly transition from office presentations to weekend dinners. Wrinkle-resistant twill weave."
+  },
+  {
+    id: 18,
+    name: "Bohemian Tiered Cotton Maxi Dress with Belt",
+    category: "Everyday",
+    trend: "Co-ord",
+    occasion: "Travel",
+    audience: "Women",
+    ages: ["13-19", "20-35", "36-59"],
+    fabric: "Airy Pure Cotton Mul",
+    color: "Terracotta Rust",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 1599,
+    mrp: 3199,
+    rating: 4.8,
+    reviews: 1110,
+    badge: "🌴 Resort Vacation Edit",
+    image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80",
+    description: "Flowing tiered bohemian maxi dress with smocked bodice, billowy sleeves, and detachable braided belt. Ideal for summer travels, vacations, and airport looks."
+  },
+  {
+    id: 19,
+    name: "Baby Organic Cotton Muslin Jhabla & Nappy Set (0–12M)",
+    category: "Everyday",
+    trend: "Kids",
+    occasion: "Casual",
+    audience: "Unisex",
+    ages: ["0-2"],
+    fabric: "100% GOTS Certified Muslin Cotton",
+    color: "Pastel Lemon & Mint",
+    sizes: ["0-3M", "3-6M", "6-12M"],
+    price: 549,
+    mrp: 1099,
+    rating: 4.9,
+    reviews: 2150,
+    badge: "🌿 100% Organic Newborn",
+    image: "https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&fit=crop&w=800&q=80",
+    description: "Traditional soft front-tie baby jhabla tops and matching adjustable nappies made with double-layer feather-light muslin. Pre-washed and zero chemicals."
+  },
+  {
+    id: 20,
+    name: "Men's Cuban Collar Printed Resort Vacation Shirt",
+    category: "Everyday",
+    trend: "Streetwear",
+    occasion: "Travel",
+    audience: "Men",
+    ages: ["13-19", "20-35", "36-59"],
+    fabric: "Rayon Viscose Flow",
+    color: "Emerald Palm Print",
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    price: 999,
+    mrp: 1999,
+    rating: 4.7,
+    reviews: 1670,
+    badge: "🔥 Goa & Beach Trending",
+    image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80",
+    description: "Retro camp-collar short sleeve shirt with breathable drape and tropical botanical prints. Trending viral look across social media for holidays."
+  },
+  {
+    id: 21,
+    name: "Heavy Velvet Embroidered Sangeet Lehenga Choli",
+    category: "Party",
+    trend: "Saree",
+    occasion: "Wedding",
+    audience: "Women",
+    ages: ["13-19", "20-35"],
+    fabric: "Micro Velvet with Can-Can",
+    color: "Emerald Dark Green",
+    sizes: ["Semi-Stitched (Fits Waist 28-44)"],
+    price: 4999,
+    mrp: 11999,
+    rating: 4.9,
+    reviews: 1450,
+    badge: "👑 Royal Bridal / Sangeet",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    description: "Opulent micro-velvet lehenga with dori, zari and sequin embroidery work, built-in double can-can flare, designer sweetheart neck choli, and soft net dupatta."
+  },
+  {
+    id: 22,
+    name: "Teen Vintage Y2K Low-Rise Flared Denim Jeans",
+    category: "Streetwear",
+    trend: "Streetwear",
+    occasion: "Casual",
+    audience: "Women",
+    ages: ["13-19", "20-35"],
+    fabric: "Washed Stretch Denim",
+    color: "Vintage Tint Indigo",
+    sizes: ["26", "28", "30", "32", "34"],
+    price: 1499,
+    mrp: 2999,
+    rating: 4.8,
+    reviews: 1840,
+    badge: "⚡ 2000s Aesthetic",
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80",
+    description: "Y2K bootcut flared jeans with light whiskering, contrast stitching, and retro low-waist silhouette. The trending staple in collegiate fashion."
+  },
+  {
+    id: 23,
+    name: "Kids Dino-Explorer Cotton T-Shirt & Cargo Shorts Set",
+    category: "Everyday",
+    trend: "Kids",
+    occasion: "School",
+    audience: "Boys",
+    ages: ["3-12"],
+    fabric: "100% Breathable Combed Cotton",
+    color: "Olive & Khaki",
+    sizes: ["3-4Y", "5-6Y", "7-8Y", "9-10Y"],
+    price: 799,
+    mrp: 1599,
+    rating: 4.8,
+    reviews: 1190,
+    badge: "🧸 Play School Favorite",
+    image: "https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&fit=crop&w=800&q=80",
+    description: "Sturdy dinosaur print graphic t-shirt paired with multi-pocket elasticated twill cargo shorts. Tough seams built for active playground adventures."
+  },
+  {
+    id: 24,
+    name: "Men's Royal Jodhpuri Bandhgala Suit Jacket",
+    category: "Formal",
+    trend: "Ethnic",
+    occasion: "Wedding",
+    audience: "Men",
+    ages: ["20-35", "36-59", "60-100"],
+    fabric: "Raw Silk Wool Blend",
+    color: "Midnight Jet Black",
+    sizes: ["38", "40", "42", "44", "46"],
+    price: 4499,
+    mrp: 8999,
+    rating: 4.9,
+    reviews: 620,
+    badge: "👑 Regal Indian Royal",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+    description: "Majestic closed-neck bandhgala jacket with handcrafted brass royal crest buttons, ticket pocket, and tailored satin lining. High prestige ethnic formal."
+  }
+];
+
+/* ============================================================
+   2. APP STATE & LOCAL STORAGE INITIALIZATION
+============================================================ */
+let cart = safeStorageGet("dhwani_cart", []);
+let wishlist = safeStorageGet("dhwani_wishlist", []);
+let activeFilters = {
+  search: "",
+  age: "",
+  audience: "",
+  category: "",
+  trend: "all",
+  priceMax: ""
+};
+let appliedCoupon = null; // { code: 'TREND500', discount: 500 }
+let currentStudioColor = "#94254b";
+
+function safeStorageGet(key, fallback) {
+  try {
+    const val = localStorage.getItem(key);
+    return val ? JSON.parse(val) : fallback;
+  } catch (e) {
+    return fallback;
+  }
+}
+
+function safeStorageSet(key, val) {
+  try {
+    localStorage.setItem(key, JSON.stringify(val));
+  } catch (e) {}
+}
+
+/* ============================================================
+   3. CURRENCY FORMATTER IN INDIAN RUPEES (₹)
+============================================================ */
+function formatINR(val) {
+  const num = Math.round(Number(val) || 0);
+  return "₹" + num.toLocaleString("en-IN");
+}
+
+/* ============================================================
+   4. TOAST NOTIFICATIONS
+============================================================ */
+function showToast(msg) {
+  const t = document.getElementById("appToast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(showToast.timer);
+  showToast.timer = setTimeout(() => t.classList.remove("show"), 2800);
+}
+
+/* ============================================================
+   5. UPDATE NAV BADGES (CART, WISHLIST, HEADER TOTAL)
+============================================================ */
+function updateHeaderBadges() {
+  const cartTotalQty = cart.reduce((acc, it) => acc + it.qty, 0);
+  const cartTotalPrice = cart.reduce((acc, it) => acc + (it.product.price * it.qty), 0);
+  
+  document.getElementById("cartCount").textContent = cartTotalQty;
+  document.getElementById("wishCount").textContent = wishlist.length;
+  document.getElementById("cartTotalHeader").textContent = formatINR(cartTotalPrice);
+
+  const modalCartCount = document.getElementById("modalCartCount");
+  if (modalCartCount) modalCartCount.textContent = cartTotalQty;
+  
+  const wishModalCount = document.getElementById("wishModalCount");
+  if (wishModalCount) wishModalCount.textContent = wishlist.length;
+
+  safeStorageSet("dhwani_cart", cart);
+  safeStorageSet("dhwani_wishlist", wishlist);
+}
+
+/* ============================================================
+   6. RENDER CATALOGUE WITH MULTI-FILTERS
+============================================================ */
+function renderCatalog() {
+  const search = document.getElementById("catalogSearch").value.trim().toLowerCase();
+  const age = document.getElementById("ageDropdown").value;
+  const audience = document.getElementById("audienceDropdown").value;
+  const category = document.getElementById("categoryDropdown").value;
+  const priceMaxVal = document.getElementById("priceMax").value;
+  const priceMax = priceMaxVal ? Number(priceMaxVal) : Infinity;
+  const sort = document.getElementById("sortDropdown").value;
+
+  let filtered = products.filter(p => {
+    // Search
+    const term = [p.name, p.category, p.trend, p.fabric, p.color, p.description, p.badge].join(" ").toLowerCase();
+    if (search && !term.includes(search)) return false;
+
+    // Age Group match
+    if (age && !p.ages.includes(age)) return false;
+
+    // Audience
+    if (audience && p.audience !== audience && p.audience !== "Unisex") return false;
+
+    // Category
+    if (category && p.category !== category) return false;
+
+    // Trend pill filter
+    if (activeFilters.trend !== "all") {
+      if (activeFilters.trend === "Kids" && !p.ages.includes("0-2") && !p.ages.includes("3-12")) return false;
+      else if (activeFilters.trend !== "Kids" && p.trend !== activeFilters.trend && p.category !== activeFilters.trend) return false;
+    }
+
+    // Max Price
+    if (p.price > priceMax) return false;
+
+    return true;
+  });
+
+  // Sorting
+  if (sort === "low") filtered.sort((a,b) => a.price - b.price);
+  else if (sort === "high") filtered.sort((a,b) => b.price - a.price);
+  else if (sort === "rating") filtered.sort((a,b) => b.rating - a.rating);
+  else filtered.sort((a,b) => b.reviews - a.reviews);
+
+  // Update counter
+  document.getElementById("itemCountDisplay").textContent = `Showing ${filtered.length} of ${products.length} designs`;
+
+  const grid = document.getElementById("productsGrid");
+  if (!filtered.length) {
+    grid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align:center; padding:50px 20px; background:#fff; border:1px dashed var(--border); border-radius:var(--radius-md);">
+        <h3 style="font-size:20px; color:var(--primary-dark); margin-bottom:8px;">No matching clothes found</h3>
+        <p style="color:var(--muted); font-size:14px; margin-bottom:18px;">Try clearing one or more filters to view our full collection of market designs.</p>
+        <button class="btn btn-primary" onclick="resetAllFilters()">Reset All Filters</button>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const isWished = wishlist.includes(p.id);
+    const discPercent = Math.round(((p.mrp - p.price) / p.mrp) * 100);
+    const primarySize = p.sizes[0] || "M";
+
+    return `
+      <article class="product-card" id="card-${p.id}">
+        <div class="product-thumb-wrap">
+          <div class="badge-tag-wrap">
+            <span class="trend-tag-badge">${p.badge}</span>
+            <span class="age-badge">Ages: ${p.ages.join(", ")}</span>
+          </div>
+
+          <button class="wish-btn ${isWished ? 'active' : ''}" onclick="toggleWishlist(${p.id})" title="${isWished ? 'Remove from Wishlist' : 'Save to Wishlist'}">
+            ${isWished ? '♥' : '♡'}
+          </button>
+
+          <img class="product-thumb" src="${p.image}" alt="${p.name}" loading="lazy">
+          <span class="cod-pill">💵 Cash on Delivery Available</span>
+        </div>
+
+        <div class="product-body">
+          <div class="product-category-row">
+            <span>${p.category} · ${p.audience}</span>
+            <span class="product-rating">★ ${p.rating} (${p.reviews})</span>
+          </div>
+
+          <h3 class="product-title" title="${p.name}">${p.name}</h3>
+          <p class="product-desc">${p.description}</p>
+
+          <div class="size-selector-row">
+            <span class="size-label">Size:</span>
+            ${p.sizes.slice(0, 4).map((s, idx) => `
+              <span class="size-chip ${idx === 0 ? 'active' : ''}" onclick="selectCardSize(this)">${s}</span>
+            `).join("")}
+          </div>
+
+          <div class="price-container">
+            <span class="curr-price">${formatINR(p.price)}</span>
+            <span class="orig-price">${formatINR(p.mrp)}</span>
+            <span class="disc-percent">${discPercent}% OFF</span>
+          </div>
+
+          <div class="product-btn-row">
+            <button class="btn-card-details" onclick="openProductDetails(${p.id})">
+              Details
+            </button>
+            <button class="btn-card-cart" onclick="addToCart(${p.id})">
+              <span>+ Bag</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function selectCardSize(elem) {
+  const row = elem.closest(".size-selector-row");
+  row.querySelectorAll(".size-chip").forEach(c => c.classList.remove("active"));
+  elem.classList.add("active");
+}
+
+/* ============================================================
+   7. FILTER ACTIONS (AGE PILLS, TREND BUTTONS, SEARCH)
+============================================================ */
+function filterByAge(ageKey) {
+  resetAllFilters(false);
+  document.getElementById("ageDropdown").value = ageKey;
+  renderCatalog();
+  document.getElementById("explore").scrollIntoView({ behavior: "smooth" });
+  showToast(`Showing fashion for age group ${ageKey} Years`);
+}
+
+function filterByTrend(trendKey, btnElement) {
+  activeFilters.trend = trendKey;
+  document.querySelectorAll(".trend-pill-btn").forEach(b => b.classList.remove("active"));
+  if (btnElement) btnElement.classList.add("active");
+  renderCatalog();
+  document.getElementById("explore").scrollIntoView({ behavior: "smooth" });
+}
+
+function applySearch() {
+  const query = document.getElementById("globalSearchInput").value.trim();
+  document.getElementById("catalogSearch").value = query;
+  renderCatalog();
+  document.getElementById("explore").scrollIntoView({ behavior: "smooth" });
+}
+
+function toggleMobileSearch() {
+  const q = prompt("Search for kurtas, baggy cargos, sarees, kids, oversized tees:");
+  if (q !== null && q.trim()) {
+    document.getElementById("catalogSearch").value = q.trim();
+    renderCatalog();
+    document.getElementById("explore").scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function resetAllFilters(shouldRender = true) {
+  document.getElementById("catalogSearch").value = "";
+  document.getElementById("globalSearchInput").value = "";
+  document.getElementById("ageDropdown").value = "";
+  document.getElementById("audienceDropdown").value = "";
+  document.getElementById("categoryDropdown").value = "";
+  document.getElementById("priceMax").value = "";
+  document.getElementById("sortDropdown").value = "trending";
+  activeFilters.trend = "all";
+  document.querySelectorAll(".trend-pill-btn").forEach((b, idx) => b.classList.toggle("active", idx === 0));
+
+  if (shouldRender) renderCatalog();
+}
+
+/* ============================================================
+   8. CART MANAGEMENT (ADD, QTY, REMOVE, PROCEED)
+============================================================ */
+function addToCart(productId, customSize = null) {
+  const p = products.find(x => x.id === productId);
+  if (!p) return;
+
+  // Determine size
+  let chosenSize = customSize;
+  if (!chosenSize) {
+    const card = document.getElementById(`card-${productId}`);
+    if (card) {
+      const activeSizeChip = card.querySelector(".size-chip.active");
+      if (activeSizeChip) chosenSize = activeSizeChip.textContent.trim();
+    }
+  }
+  if (!chosenSize) chosenSize = p.sizes[0] || "Standard";
+
+  const existing = cart.find(it => it.product.id === productId && it.size === chosenSize);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({
+      product: p,
+      size: chosenSize,
+      qty: 1
+    });
+  }
+
+  updateHeaderBadges();
+  showToast(`Added ${p.name} (${chosenSize}) to your bag!`);
+}
+
+function updateCartQty(index, change) {
+  if (!cart[index]) return;
+  cart[index].qty += change;
+  if (cart[index].qty <= 0) {
+    cart.splice(index, 1);
+  }
+  updateHeaderBadges();
+  renderCartDrawer();
+}
+
+function removeCartItem(index) {
+  if (!cart[index]) return;
+  cart.splice(index, 1);
+  updateHeaderBadges();
+  renderCartDrawer();
+  showToast("Item removed from your bag");
+}
+
+function openCartModal() {
+  renderCartDrawer();
+  document.getElementById("cartModal").classList.add("open");
+}
+
+function closeCartModal() {
+  document.getElementById("cartModal").classList.remove("open");
+}
+
+function renderCartDrawer() {
+  const body = document.getElementById("cartModalBody");
+  if (!cart.length) {
+    body.innerHTML = `
+      <div style="text-align:center; padding:45px 20px;">
+        <div style="font-size:48px; margin-bottom:12px;">🛍️</div>
+        <h3 style="font-size:20px; color:var(--primary-dark); margin-bottom:6px;">Your Shopping Bag is Empty</h3>
+        <p style="color:var(--muted); font-size:14px; margin-bottom:20px;">Explore the hottest running market trends and add clothes for any age group!</p>
+        <button class="btn btn-primary" onclick="closeCartModal()">Continue Shopping</button>
+      </div>`;
+    return;
+  }
+
+  const subtotal = cart.reduce((acc, it) => acc + (it.product.price * it.qty), 0);
+  const gstTax = Math.round(subtotal * 0.05); // 5% GST for apparel
+  const deliveryFee = subtotal >= 999 ? 0 : 99; // Free above ₹999
+  const discount = appliedCoupon ? appliedCoupon.discount : 0;
+  const netTotal = Math.max(0, subtotal + gstTax + deliveryFee - discount);
+
+  body.innerHTML = `
+    <!-- Items List -->
+    <div class="cart-items-container">
+      ${cart.map((it, idx) => `
+        <div class="cart-item-card">
+          <img class="cart-item-img" src="${it.product.image}" alt="${it.product.name}">
+          <div class="cart-item-info">
+            <h4>${it.product.name}</h4>
+            <div class="cart-item-meta">
+              <span>Size: <strong>${it.size}</strong></span>
+              <span>Unit: <strong>${formatINR(it.product.price)}</strong></span>
+            </div>
+            <div class="qty-stepper">
+              <button class="qty-btn" onclick="updateCartQty(${idx}, -1)">−</button>
+              <span class="qty-display">${it.qty}</span>
+              <button class="qty-btn" onclick="updateCartQty(${idx}, 1)">+</button>
+            </div>
+          </div>
+          <div class="cart-item-price-side">
+            <span class="cart-item-total">${formatINR(it.product.price * it.qty)}</span>
+            <button class="cart-remove-btn" onclick="removeCartItem(${idx})">🗑️ Remove</button>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+
+    <!-- Free Delivery Notice -->
+    ${subtotal < 999 ? `
+      <div style="background:#fff6e8; border:1px solid #f3d7a8; border-radius:8px; padding:10px 14px; font-size:12.5px; color:#855214; margin-bottom:16px;">
+        🚚 Add <strong>${formatINR(999 - subtotal)}</strong> more for <strong>FREE Delivery</strong> across India!
+      </div>
+    ` : `
+      <div style="background:#e8f7f0; border:1px solid #a3e3c2; border-radius:8px; padding:10px 14px; font-size:12.5px; color:#147a54; margin-bottom:16px;">
+        🎉 Congratulations! You have unlocked <strong>FREE Doorstep Delivery</strong> across India.
+      </div>
+    `}
+
+    <!-- Billing Summary Box -->
+    <div class="bill-summary-box">
+      <div style="font-weight:800; font-size:15px; color:var(--primary-dark); margin-bottom:10px;">Order & Billing Summary</div>
+      <div class="bill-row">
+        <span>Cart Subtotal (${cart.reduce((a, b) => a + b.qty, 0)} items)</span>
+        <span>${formatINR(subtotal)}</span>
+      </div>
+      <div class="bill-row">
+        <span>Estimated GST (5% Apparel)</span>
+        <span>${formatINR(gstTax)}</span>
+      </div>
+      <div class="bill-row">
+        <span>Delivery / Shipping Fee</span>
+        <span>${deliveryFee === 0 ? '<strong style="color:var(--emerald);">FREE</strong>' : formatINR(deliveryFee)}</span>
+      </div>
+
+      ${appliedCoupon ? `
+        <div class="bill-row" style="color:var(--emerald); font-weight:700;">
+          <span>Coupon Discount (${appliedCoupon.code})</span>
+          <span>− ${formatINR(appliedCoupon.discount)}</span>
+        </div>
+      ` : ''}
+
+      <div class="bill-row total-row">
+        <span>Total Payable (INR)</span>
+        <span>${formatINR(netTotal)}</span>
+      </div>
+
+      <!-- Coupon Code Input -->
+      <div class="coupon-input-wrap">
+        <input id="couponCodeInput" type="text" placeholder="Promo code: TREND500 or WELCOME200" value="${appliedCoupon ? appliedCoupon.code : ''}">
+        <button type="button" onclick="applyCouponCode()">Apply Code</button>
+      </div>
+      <small style="color:var(--muted); font-size:11px; margin-top:4px; display:block;">Use <strong>TREND500</strong> for ₹500 off (orders ₹1,999+) or <strong>WELCOME200</strong> for ₹200 off.</small>
+    </div>
+
+    <!-- Billing & Cash on Delivery Form -->
+    <form id="checkoutBillingForm" onsubmit="event.preventDefault(); submitFinalOrder(${netTotal});">
+      <div style="font-weight:800; font-size:16px; color:var(--primary-dark); margin-bottom:12px;">
+        📍 Step 1: Customer Contact & Shipping Address
+      </div>
+
+      <div class="checkout-form-grid">
+        <div class="field-group">
+          <label for="custName">Full Name *</label>
+          <input id="custName" type="text" required placeholder="e.g. Rahul Sharma">
+        </div>
+
+        <div class="field-group">
+          <label for="custPhone">Indian Mobile Number (+91) *</label>
+          <input id="custPhone" type="tel" pattern="[0-9]{10}" required placeholder="10-digit number e.g. 9876543210">
+        </div>
+
+        <div class="field-group form-span-2">
+          <label for="custAddress">Complete Street Address (Flat / House No / Landmark) *</label>
+          <input id="custAddress" type="text" required placeholder="e.g. Flat 402, Sunshine Apts, MG Road">
+        </div>
+
+        <div class="field-group">
+          <label for="custPincode">Pincode (6-Digits) *</label>
+          <input id="custPincode" type="text" pattern="[0-9]{6}" required placeholder="e.g. 400001, 110001, 560001">
+        </div>
+
+        <div class="field-group">
+          <label for="custState">State / Region *</label>
+          <select id="custState" required>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Delhi NCR">Delhi NCR</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="West Bengal">West Bengal</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Other">Other States & UTs</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Payment Method Selection -->
+      <div style="font-weight:800; font-size:16px; color:var(--primary-dark); margin-bottom:12px;">
+        💳 Step 2: Choose Payment Method
+      </div>
+
+      <div class="payment-options-grid">
+        <!-- CASH ON DELIVERY (COD) -->
+        <label class="pay-option-card selected" id="codOptionCard" onclick="selectPaymentMethod('COD')">
+          <input type="radio" name="payMethod" value="COD" checked>
+          <div>
+            <div class="pay-title">💵 Cash on Delivery (COD)</div>
+            <div class="pay-desc">Pay safely with cash or scan QR upon arrival at your doorstep. Zero risk.</div>
+          </div>
+        </label>
+
+        <!-- UPI PAYMENT -->
+        <label class="pay-option-card" id="upiOptionCard" onclick="selectPaymentMethod('UPI')">
+          <input type="radio" name="payMethod" value="UPI">
+          <div>
+            <div class="pay-title">⚡ Instant UPI (GPay / PhonePe / Paytm)</div>
+            <div class="pay-desc">Instant confirmation with any Indian UPI app. Extra 5% instant cashback.</div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Checkout Button -->
+      <button class="btn btn-primary" type="submit" style="width:100%; height:50px; font-size:16px; box-shadow:0 10px 30px rgba(148,37,75,0.3);">
+        ✅ Confirm & Place Order (${formatINR(netTotal)})
+      </button>
+      <div style="text-align:center; font-size:12px; color:var(--muted); margin-top:8px;">
+        📞 Questions before ordering? Call Indian Helpline: <strong>+91 98765 43210</strong>
+      </div>
+    </form>
+  `;
+}
+
+function selectPaymentMethod(method) {
+  const codCard = document.getElementById("codOptionCard");
+  const upiCard = document.getElementById("upiOptionCard");
+  if (method === "COD") {
+    codCard.classList.add("selected");
+    upiCard.classList.remove("selected");
+  } else {
+    upiCard.classList.add("selected");
+    codCard.classList.remove("selected");
+  }
+}
+
+function applyCouponCode() {
+  const input = document.getElementById("couponCodeInput");
+  const code = input.value.trim().toUpperCase();
+  const subtotal = cart.reduce((acc, it) => acc + (it.product.price * it.qty), 0);
+
+  if (code === "TREND500") {
+    if (subtotal < 1999) {
+      alert("Coupon 'TREND500' is valid on orders above ₹1,999. Please add more items to claim ₹500 off!");
+      return;
+    }
+    appliedCoupon = { code: "TREND500", discount: 500 };
+    showToast("🎉 Flat ₹500 Discount Applied!");
+  } else if (code === "WELCOME200") {
+    appliedCoupon = { code: "WELCOME200", discount: 200 };
+    showToast("🎉 Flat ₹200 Welcome Discount Applied!");
+  } else {
+    alert("Invalid promo code. Try 'TREND500' or 'WELCOME200'.");
+    return;
+  }
+  renderCartDrawer();
+}
+
+/* ============================================================
+   9. FINAL ORDER SUBMISSION & RECEIPT GENERATION
+============================================================ */
+function submitFinalOrder(netTotal) {
+  const name = document.getElementById("custName").value.trim();
+  const phone = document.getElementById("custPhone").value.trim();
+  const address = document.getElementById("custAddress").value.trim();
+  const pincode = document.getElementById("custPincode").value.trim();
+  const state = document.getElementById("custState").value;
+  const payMethodRadio = document.querySelector('input[name="payMethod"]:checked');
+  const paymentMode = payMethodRadio ? payMethodRadio.value : "Cash on Delivery";
+
+  const orderId = "DHWANI-IN-" + Math.floor(100000 + Math.random() * 900000);
+  const deliveryDate = new Date();
+  deliveryDate.setDate(deliveryDate.getDate() + 4);
+  const formattedDeliveryDate = deliveryDate.toLocaleDateString("en-IN", {
+    weekday: "long",
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+
+  const orderedItemsCopy = [...cart];
+
+  // Reset cart
+  cart = [];
+  appliedCoupon = null;
+  updateHeaderBadges();
+
+  const body = document.getElementById("cartModalBody");
+  body.innerHTML = `
+    <div class="receipt-card">
+      <div class="receipt-icon">🎉</div>
+      <h3 style="color:#147a54; font-size:24px; margin-bottom:4px;">Order Placed Successfully!</h3>
+      <p style="font-size:14px; color:var(--ink-secondary); margin-bottom:12px;">Thank you for shopping with Dhwani. Your order is confirmed and will be dispatched within 24 hours.</p>
+      
+      <div class="receipt-id">Order Reference: #${orderId}</div>
+
+      <div style="text-align:left; background:#fff; border:1px solid #c9ebd8; border-radius:8px; padding:16px; margin:16px 0; font-size:13px; line-height:1.6;">
+        <div><strong>👤 Customer:</strong> ${name} (+91 ${phone})</div>
+        <div><strong>📍 Delivery Address:</strong> ${address}, Pincode: ${pincode}, ${state}</div>
+        <div><strong>💳 Payment Mode:</strong> <span style="color:#147a54; font-weight:800;">${paymentMode === 'COD' ? 'Cash on Delivery (Pay upon arrival)' : 'Instant UPI Verified'}</span></div>
+        <div><strong>🚚 Estimated Delivery:</strong> ${formattedDeliveryDate}</div>
+        <div><strong>💰 Total Amount to Pay:</strong> <span style="font-size:16px; font-weight:900; color:var(--primary-dark);">${formatINR(netTotal)}</span></div>
+      </div>
+
+      <div style="font-size:12.5px; color:var(--muted); margin-bottom:18px;">
+        An SMS confirmation has been dispatched to <strong>+91 ${phone}</strong>. For inquiries or live dispatch updates, call our helpline at <strong>+91 98765 43210</strong>.
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+        <button class="btn btn-primary" onclick="closeCartModal()">Continue Shopping</button>
+        <a class="btn btn-secondary" style="border:1.5px solid var(--border);" href="https://wa.me/919876543210?text=Hi%20Dhwani%20Fashion%2C%20I%20just%20placed%20order%20%23${orderId}" target="_blank">
+          💬 WhatsApp Tracking Support
+        </a>
+      </div>
+    </div>
+  `;
+}
+
+/* ============================================================
+   10. PRODUCT DETAILS MODAL
+============================================================ */
+function openProductDetails(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+
+  const discPercent = Math.round(((p.mrp - p.price) / p.mrp) * 100);
+
+  document.getElementById("detailTitle").textContent = p.name;
+  document.getElementById("detailModalBody").innerHTML = `
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+      <div>
+        <img src="${p.image}" alt="${p.name}" style="width:100%; border-radius:var(--radius-md); aspect-ratio:3/4; object-fit:cover;">
+      </div>
+      <div>
+        <div style="display:flex; gap:6px; margin-bottom:8px;">
+          <span class="trend-tag-badge">${p.badge}</span>
+          <span class="age-badge">Ages: ${p.ages.join(", ")}</span>
+        </div>
+
+        <h3 style="font-size:22px; color:var(--primary-dark); margin-bottom:8px;">${p.name}</h3>
+        <p style="font-size:14px; color:var(--ink-secondary); line-height:1.6; margin-bottom:14px;">${p.description}</p>
+
+        <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:16px;">
+          <span style="font-size:26px; font-weight:900; color:var(--primary-dark);">${formatINR(p.price)}</span>
+          <span style="font-size:16px; color:var(--muted); text-decoration:line-through;">${formatINR(p.mrp)}</span>
+          <span class="disc-percent">${discPercent}% OFF</span>
+        </div>
+
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:12px; font-size:13px; line-height:1.6; margin-bottom:18px;">
+          <div><strong>Fabric:</strong> ${p.fabric}</div>
+          <div><strong>Occasion:</strong> ${p.occasion} · <strong>Audience:</strong> ${p.audience}</div>
+          <div><strong>Color:</strong> ${p.color}</div>
+          <div><strong>Returns:</strong> 7-Day Doorstep Replacement Guarantee</div>
+        </div>
+
+        <div style="margin-bottom:18px;">
+          <label style="display:block; font-size:12px; font-weight:800; margin-bottom:6px;">SELECT YOUR SIZE:</label>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;" id="modalSizeRow">
+            ${p.sizes.map((s, idx) => `
+              <button type="button" class="size-chip ${idx === 0 ? 'active' : ''}" style="padding:6px 14px; font-size:13px;" onclick="selectCardSize(this)">${s}</button>
+            `).join("")}
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <button class="btn btn-primary" onclick="addFromModalToCart(${p.id})">
+            🛍️ Add to Bag
+          </button>
+          <a class="btn btn-outline" style="color:var(--primary-dark); border-color:var(--primary);" href="https://wa.me/919876543210?text=Hello%20Dhwani%2C%20can%20you%20help%20me%20choose%20size%20for%20${encodeURIComponent(p.name)}%3F" target="_blank">
+            💬 Sizing Help
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById("productDetailsModal").classList.add("open");
+}
+
+function addFromModalToCart(productId) {
+  const modalRow = document.getElementById("modalSizeRow");
+  let chosenSize = null;
+  if (modalRow) {
+    const activeChip = modalRow.querySelector(".size-chip.active");
+    if (activeChip) chosenSize = activeChip.textContent.trim();
+  }
+  addToCart(productId, chosenSize);
+  closeDetailsModal();
+}
+
+function closeDetailsModal() {
+  document.getElementById("productDetailsModal").classList.remove("open");
+}
+
+/* ============================================================
+   11. WISHLIST MANAGEMENT
+============================================================ */
+function toggleWishlist(id) {
+  const idx = wishlist.indexOf(id);
+  if (idx > -1) {
+    wishlist.splice(idx, 1);
+    showToast("Removed from wishlist");
+  } else {
+    wishlist.push(id);
+    showToast("Saved to your wishlist ♥");
+  }
+  updateHeaderBadges();
+  renderCatalog();
+}
+
+function openWishlistModal() {
+  const body = document.getElementById("wishlistModalBody");
+  const items = products.filter(p => wishlist.includes(p.id));
+
+  if (!items.length) {
+    body.innerHTML = `
+      <div style="text-align:center; padding:40px 20px;">
+        <div style="font-size:42px; margin-bottom:10px;">♡</div>
+        <h3 style="font-size:18px; color:var(--primary-dark); margin-bottom:6px;">Your Wishlist is Empty</h3>
+        <p style="color:var(--muted); font-size:13.5px; margin-bottom:18px;">Click the heart icon on any outfit while browsing to save it here.</p>
+        <button class="btn btn-primary" onclick="closeWishlistModal()">Explore Market Styles</button>
+      </div>`;
+  } else {
+    body.innerHTML = `
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        ${items.map(p => `
+          <div style="display:flex; align-items:center; gap:14px; border:1px solid var(--border); padding:10px; border-radius:8px;">
+            <img src="${p.image}" alt="${p.name}" style="width:60px; height:75px; object-fit:cover; border-radius:4px;">
+            <div style="flex:1;">
+              <h4 style="font-size:14px; font-weight:800; color:var(--ink);">${p.name}</h4>
+              <div style="font-size:14px; font-weight:800; color:var(--primary);">${formatINR(p.price)}</div>
+            </div>
+            <button class="btn btn-primary" style="padding:8px 14px; font-size:12px;" onclick="addToCart(${p.id}); closeWishlistModal();">
+              + Bag
+            </button>
+            <button style="color:red; font-size:18px; padding:4px;" onclick="toggleWishlist(${p.id}); openWishlistModal();">
+              ✕
+            </button>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  }
+  document.getElementById("wishlistModal").classList.add("open");
+}
+
+function closeWishlistModal() {
+  document.getElementById("wishlistModal").classList.remove("open");
+}
+
+/* ============================================================
+   12. INDIAN CUSTOMER SUPPORT MODAL
+============================================================ */
+function openSupportModal() {
+  document.getElementById("supportModal").classList.add("open");
+}
+
+function closeSupportModal() {
+  document.getElementById("supportModal").classList.remove("open");
+}
+
+/* ============================================================
+   13. INTERACTIVE 2D BOUTIQUE MANNEQUIN STUDIO & REALISTIC STATUES
+============================================================ */
+const studioGarmentCatalog = {
+  man: [
+    { id: "kurta_set", name: "Lucknowi / Festive Kurta Pyjama Set", price: 2499 },
+    { id: "suit_blazer", name: "Tailored Power Blazer & Formal Trousers", price: 3499 },
+    { id: "linen_shirt", name: "100% Pure Linen Mandarin Shirt & Chinos", price: 1899 },
+    { id: "bandhgala", name: "Royal Heritage Jodhpuri Bandhgala Suit", price: 4499 },
+    { id: "streetwear_tee", name: "Oversized Streetwear Graphic Tee & Cargo", price: 1299 },
+    { id: "dhoti_kurta", name: "Indo-Western Asymmetric Kurta & Dhoti", price: 2799 }
+  ],
+  woman: [
+    { id: "dress", name: "Fluid Designer Anarkali / Flare Maxi Gown", price: 2499 },
+    { id: "kurta_palazzo", name: "Lucknowi Chikankari Kurta & Palazzo Set", price: 1999 },
+    { id: "lehenga", name: "Royal Velvet Sangeet Lehenga Choli", price: 4999 },
+    { id: "power_blazer", name: "Corporate Tailored Blazer & Straight Trousers", price: 2999 },
+    { id: "coord_set", name: "Aesthetic Crop Top & Wide-Leg Co-ord Set", price: 1599 },
+    { id: "saree_drape", name: "Regal Banarasi Saree Drape & Designer Blouse", price: 3299 }
+  ],
+  kid: [
+    { id: "kid_kurta_jacket", name: "Festive Kids Kurta & Nehru Waistcoat Set", price: 1499 },
+    { id: "kid_frock", name: "Sequin Princess Party Ball Frock", price: 1299 },
+    { id: "kid_playsuit", name: "Playful Cotton Dungaree / Playsuit", price: 999 },
+    { id: "kid_tee_shorts", name: "Dino Explorer Cotton Tee & Cargo Shorts", price: 799 }
+  ],
+  senior: [
+    { id: "senior_khadi", name: "Pure Khadi Comfort Kurta & Relaxed Pyjama", price: 1499 },
+    { id: "senior_tunic", name: "Adaptive Easy-Dress Magnetic Button Tunic", price: 1599 },
+    { id: "senior_linen", name: "Breathable Classic Linen Shirt & Trousers", price: 1899 },
+    { id: "senior_dhoti", name: "Gentle Heritage Dhoti & Kurta Set", price: 1699 }
+  ]
+};
+
+function selectStudioModel(modelKey) {
+  const modelSelect = document.getElementById("studioModel");
+  if (modelSelect) {
+    modelSelect.value = modelKey;
+  }
+  onStudioModelChange(modelKey);
+}
+
+function onStudioModelChange(modelVal) {
+  let group = "woman";
+  if (modelVal === "man" || modelVal === "teen_boy") group = "man";
+  else if (modelVal === "kid") group = "kid";
+  else if (modelVal === "senior") group = "senior";
+  else group = "woman";
+
+  // Update quick selector pills
+  document.querySelectorAll(".model-pill-btn").forEach(btn => btn.classList.remove("active"));
+  const activePill = document.getElementById(`pill-${group}`);
+  if (activePill) activePill.classList.add("active");
+
+  // Populate tailored garments
+  populateStudioGarments(group);
+
+  // Update default project title if standard
+  const projInput = document.getElementById("studioProjectName");
+  if (projInput) {
+    if (group === "man") projInput.value = "Royal Lucknowi Kurta Set";
+    else if (group === "kid") projInput.value = "Junior Festive Heritage Set";
+    else if (group === "senior") projInput.value = "Classic Khadi Comfort Look";
+    else projInput.value = "Royal Festive Anarkali";
+  }
+
+  updateStudioMannequin();
+}
+
+function populateStudioGarments(group) {
+  const select = document.getElementById("studioGarment");
+  if (!select) return;
+  const list = studioGarmentCatalog[group] || studioGarmentCatalog.woman;
+  const previousVal = select.value;
+  select.innerHTML = list.map(g => `<option value="${g.id}">${g.name}</option>`).join("");
+  if (list.some(g => g.id === previousVal)) {
+    select.value = previousVal;
+  } else {
+    select.value = list[0].id;
+  }
+}
+
+function setStudioColor(hex, btn) {
+  currentStudioColor = hex;
+  document.querySelectorAll("#studioColorPicker .color-btn").forEach(b => {
+    b.style.boxShadow = "0 0 0 1px #ddd";
+  });
+  if (btn) btn.style.boxShadow = `0 0 0 2px ${hex}`;
+  updateStudioMannequin();
+}
+
+function updateBudgetDisplay(val) {
+  document.getElementById("studioBudgetText").textContent = formatINR(val);
+  document.getElementById("studioBadgePrice").textContent = `Est. ${formatINR(val)} (Free COD)`;
+}
+
+function updateStudioMannequin() {
+  const modelSelect = document.getElementById("studioModel");
+  const modelVal = modelSelect ? modelSelect.value : "woman";
+  let group = "woman";
+  if (modelVal === "man" || modelVal === "teen_boy") group = "man";
+  else if (modelVal === "kid") group = "kid";
+  else if (modelVal === "senior") group = "senior";
+  else group = "woman";
+
+  const garmentSelect = document.getElementById("studioGarment");
+  const garment = garmentSelect ? garmentSelect.value : "dress";
+  const patternSelect = document.getElementById("studioPattern");
+  const pattern = patternSelect ? patternSelect.value : "Plain";
+  const sleeveSelect = document.getElementById("studioSleeve");
+  const sleeve = sleeveSelect ? sleeveSelect.value : "long";
+  const fabricSelect = document.getElementById("studioFabric");
+  const fabric = fabricSelect ? fabricSelect.value : "Mulberry Silk";
+  const budgetInput = document.getElementById("studioBudget");
+  const budget = budgetInput ? budgetInput.value : 2499;
+
+  // Update Statue Indicator Badge
+  const indicator = document.getElementById("studioStatueIndicator");
+  if (indicator) {
+    if (group === "man") indicator.innerHTML = "✦ 👨 Male Boutique Display Statue";
+    else if (group === "kid") indicator.innerHTML = "✦ 🧒 Kids Boutique Display Statue";
+    else if (group === "senior") indicator.innerHTML = "✦ 👴 Senior Boutique Display Statue";
+    else indicator.innerHTML = "✦ 👩 Female Boutique Display Statue";
+  }
+
+  // Update Badges
+  const garmentList = studioGarmentCatalog[group] || studioGarmentCatalog.woman;
+  const currentGarmentObj = garmentList.find(g => g.id === garment) || garmentList[0];
+  const garmentName = currentGarmentObj ? currentGarmentObj.name : "Custom Outfit";
+
+  const bType = document.getElementById("studioBadgeType");
+  const bFabric = document.getElementById("studioBadgeFabric");
+  const bPrice = document.getElementById("studioBadgePrice");
+  if (bType) bType.textContent = garmentName;
+  if (bFabric) bFabric.textContent = fabric;
+  if (bPrice) bPrice.textContent = `Est. ${formatINR(budget)} (Free COD)`;
+
+  // Generate the full SVG
+  const svg = document.getElementById("fashionModel");
+  if (svg) {
+    svg.innerHTML = buildStatueAndOutfitSVG(group, garment, sleeve, pattern, fabric, currentStudioColor);
+  }
+}
+
+function buildStatueAndOutfitSVG(group, garment, sleeve, pattern, fabric, color) {
+  // Pattern map
+  const patternMap = {
+    Plain: "none",
+    Floral: "url(#floralPat)",
+    Stripes: "url(#stripesPat)",
+    Checks: "url(#checksPat)",
+    Embroidery: "url(#embroideryPat)"
+  };
+  const patFill = patternMap[pattern] || "none";
+
+  // Common SVG DEFS with showroom gradients & high-detail patterns
+  const defsHTML = `
+    <defs>
+      <!-- Stand & Metallic Trims -->
+      <linearGradient id="standBaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#4a4247"/>
+        <stop offset="50%" stop-color="#2a2428"/>
+        <stop offset="100%" stop-color="#161214"/>
+      </linearGradient>
+      <linearGradient id="standBaseTopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8c7e85"/>
+        <stop offset="50%" stop-color="#c5b8be"/>
+        <stop offset="100%" stop-color="#73666d"/>
+      </linearGradient>
+      <linearGradient id="chromePoleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#786c72"/>
+        <stop offset="35%" stop-color="#fdfafd"/>
+        <stop offset="65%" stop-color="#d6cad0"/>
+        <stop offset="100%" stop-color="#5a4e55"/>
+      </linearGradient>
+      <linearGradient id="chromeTrimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fefefe"/>
+        <stop offset="45%" stop-color="#d4af37"/>
+        <stop offset="70%" stop-color="#aa820a"/>
+        <stop offset="100%" stop-color="#553f02"/>
+      </linearGradient>
+      <linearGradient id="roseGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffece8"/>
+        <stop offset="40%" stop-color="#e0a39a"/>
+        <stop offset="75%" stop-color="#b86d63"/>
+        <stop offset="100%" stop-color="#733830"/>
+      </linearGradient>
+
+      <!-- Realistic Boutique Mannequin Fiberglass Statues -->
+      <linearGradient id="maleDummySkin" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#beaba0"/>
+        <stop offset="25%" stop-color="#dec9be"/>
+        <stop offset="50%" stop-color="#f4e8e1"/>
+        <stop offset="75%" stop-color="#dac5b9"/>
+        <stop offset="100%" stop-color="#b0978b"/>
+      </linearGradient>
+      <linearGradient id="femaleDummySkin" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#cbb3a9"/>
+        <stop offset="30%" stop-color="#ebd8cf"/>
+        <stop offset="50%" stop-color="#faf2ed"/>
+        <stop offset="70%" stop-color="#ebd5cb"/>
+        <stop offset="100%" stop-color="#b89a8e"/>
+      </linearGradient>
+      <linearGradient id="kidDummySkin" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#d2beb5"/>
+        <stop offset="30%" stop-color="#efe1da"/>
+        <stop offset="50%" stop-color="#fcf6f2"/>
+        <stop offset="70%" stop-color="#ebdcd4"/>
+        <stop offset="100%" stop-color="#c5aba0"/>
+      </linearGradient>
+      <linearGradient id="seniorDummySkin" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#beaba0"/>
+        <stop offset="30%" stop-color="#ded0c5"/>
+        <stop offset="50%" stop-color="#f2ebe3"/>
+        <stop offset="70%" stop-color="#dccfc3"/>
+        <stop offset="100%" stop-color="#b39e92"/>
+      </linearGradient>
+
+      <!-- Volumetric 3D Fabric Lighting & Depth Shadows -->
+      <linearGradient id="clothLighting" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#000000" stop-opacity="0.3"/>
+        <stop offset="25%" stop-color="#ffffff" stop-opacity="0.14"/>
+        <stop offset="50%" stop-color="#ffffff" stop-opacity="0.32"/>
+        <stop offset="75%" stop-color="#ffffff" stop-opacity="0.1"/>
+        <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+      </linearGradient>
+
+      <!-- Rich Fabric Patterns -->
+      <pattern id="floralPat" width="36" height="36" patternUnits="userSpaceOnUse">
+        <circle cx="18" cy="18" r="5" fill="#ffffff" opacity=".85"/>
+        <circle cx="18" cy="18" r="2.5" fill="#f8d070"/>
+        <path d="M18 7 C16 12 20 12 18 7 Z M18 29 C16 24 20 24 18 29 Z M7 18 C12 16 12 20 7 18 Z M29 18 C24 16 24 20 29 18 Z" fill="#ffffff" opacity=".75"/>
+        <circle cx="6" cy="6" r="2" fill="#ffd170" opacity=".6"/>
+        <circle cx="30" cy="30" r="2" fill="#ffd170" opacity=".6"/>
+      </pattern>
+      <pattern id="stripesPat" width="16" height="16" patternUnits="userSpaceOnUse">
+        <line x1="4" y1="0" x2="4" y2="16" stroke="#ffffff" stroke-width="2.5" opacity=".4"/>
+        <line x1="12" y1="0" x2="12" y2="16" stroke="#ffffff" stroke-width="1" opacity=".25"/>
+      </pattern>
+      <pattern id="checksPat" width="24" height="24" patternUnits="userSpaceOnUse">
+        <rect width="24" height="24" fill="none"/>
+        <path d="M0 12 H24 M12 0 V24" stroke="#ffffff" stroke-width="2.5" opacity=".35"/>
+        <path d="M0 0 H24 V24 H0 Z" fill="none" stroke="#ffffff" stroke-width="1" opacity=".18"/>
+      </pattern>
+      <pattern id="embroideryPat" width="32" height="32" patternUnits="userSpaceOnUse">
+        <path d="M16 6 L18 13 L25 13 L19 17 L21 24 L16 19 L11 24 L13 17 L7 13 L14 13 Z" fill="#ffdf7a" opacity=".65"/>
+        <circle cx="16" cy="16" r="2" fill="#ffffff"/>
+        <circle cx="4" cy="4" r="1.5" fill="#ffffff" opacity=".6"/>
+        <circle cx="28" cy="4" r="1.5" fill="#ffffff" opacity=".6"/>
+        <circle cx="4" cy="28" r="1.5" fill="#ffffff" opacity=".6"/>
+        <circle cx="28" cy="28" r="1.5" fill="#ffffff" opacity=".6"/>
+      </pattern>
+    </defs>
+  `;
+
+  // Pedestal Stand
+  const standHTML = `
+    <!-- Showroom Pedestal Stand -->
+    <g id="svgPedestalLayer">
+      <ellipse cx="220" cy="565" rx="120" ry="16" fill="rgba(60, 20, 35, 0.18)"/>
+      <ellipse cx="220" cy="561" rx="84" ry="14" fill="url(#standBaseGrad)" stroke="#5e5057" stroke-width="1.5"/>
+      <ellipse cx="220" cy="559" rx="76" ry="11" fill="url(#standBaseTopGrad)"/>
+      <rect x="217" y="270" width="6" height="290" fill="url(#chromePoleGrad)" rx="2"/>
+      <rect x="213" y="475" width="14" height="6" fill="#4a4247" rx="2"/>
+      <circle cx="220" cy="478" r="2" fill="#fff" opacity=".7"/>
+    </g>
+  `;
+
+  // Render statue and clothes according to gender/category
+  let statueHTML = "";
+  let garmentHTML = "";
+
+  if (group === "man") {
+    // ----------------------------------------------------
+    // ACTUAL MALE BOUTIQUE DISPLAY MANNEQUIN STATUE
+    // ----------------------------------------------------
+    statueHTML = `
+      <g id="svgMannequinStatue">
+        <!-- Male Finial Cap & Sculpted Mannequin Head -->
+        <ellipse cx="220" cy="58" rx="14" ry="5" fill="url(#chromeTrimGrad)"/>
+        <path d="M220 58 C244 58 256 75 256 102 C256 128 242 144 228 150 L212 150 C198 144 184 128 184 102 C184 75 196 58 220 58 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+        
+        <!-- Masculine Neck -->
+        <path d="M205 146 L203 174 C214 177 226 177 237 174 L235 146 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+
+        <!-- Broad Masculine Shoulders & Articulation Caps -->
+        <ellipse cx="128" cy="180" rx="9" ry="13" fill="url(#chromeTrimGrad)"/>
+        <ellipse cx="312" cy="180" rx="9" ry="13" fill="url(#chromeTrimGrad)"/>
+
+        <!-- Athletic Torso & Pectoral Contours -->
+        <path d="M128 180 C165 166 275 166 312 180 L296 285 C265 295 175 295 144 285 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+        <path d="M162 218 Q220 236 278 218" fill="none" stroke="rgba(140, 90, 80, 0.22)" stroke-width="2"/>
+        <line x1="220" y1="180" x2="220" y2="248" stroke="rgba(140, 90, 80, 0.2)" stroke-width="1.5"/>
+
+        <!-- Tapered Athletic Waist & Pelvis -->
+        <path d="M144 285 L150 355 C185 368 255 368 290 355 L296 285 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+
+        <!-- Mannequin Arms in Natural Boutique Tailoring Stance -->
+        <path d="M128 180 L110 275 L120 360 L136 355 L130 275 L144 200 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+        <path d="M312 180 L330 275 L320 360 L304 355 L310 275 L296 200 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+        <!-- Sculpted hands -->
+        <ellipse cx="123" cy="370" rx="6" ry="12" fill="url(#maleDummySkin)"/>
+        <ellipse cx="317" cy="370" rx="6" ry="12" fill="url(#maleDummySkin)"/>
+
+        <!-- Athletic Mannequin Legs on Stand Pole -->
+        <path d="M162 355 L174 525 L196 525 L212 365 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+        <path d="M228 365 L244 525 L266 525 L278 355 Z" fill="url(#maleDummySkin)" stroke="#b0978b" stroke-width="1.5"/>
+      </g>
+    `;
+
+    // MALE GARMENTS ON TOP OF THE MALE STATUE
+    if (garment === "suit_blazer") {
+      // Formal Suit Blazer & Trousers
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Formal Suit Trousers -->
+          <path d="M148 285 L160 525 L190 525 L218 360 L222 360 L250 525 L280 525 L292 285 Z" fill="#201c22" stroke="#121014" stroke-width="1.5"/>
+          <line x1="175" y1="310" x2="175" y2="525" stroke="#38323c" stroke-width="1.5"/>
+          <line x1="265" y1="310" x2="265" y2="525" stroke="#38323c" stroke-width="1.5"/>
+
+          <!-- Inner Formal White Shirt & Burgundy Silk Tie -->
+          <polygon points="204,172 236,172 230,240 210,240" fill="#ffffff"/>
+          <polygon points="217,174 223,174 225,230 220,245 215,230" fill="#881337"/>
+
+          <!-- Blazer Body -->
+          <path d="M130 178 Q220 162 310 178 L298 340 C260 350 180 350 142 340 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M130 178 Q220 162 310 178 L298 340 C260 350 180 350 142 340 Z" fill="url(#clothLighting)"/>
+          <path d="M130 178 Q220 162 310 178 L298 340 C260 350 180 350 142 340 Z" fill="${patFill}" opacity="0.82"/>
+
+          <!-- Peak Lapels -->
+          <polygon points="204,172 216,250 185,225 190,195 204,172" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.4"/>
+          <polygon points="236,172 224,250 255,225 250,195 236,172" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.4"/>
+
+          <!-- Pockets & Buttons -->
+          <rect x="155" y="215" width="24" height="6" fill="#fff" rx="1"/>
+          <rect x="146" y="295" width="32" height="12" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3" rx="2"/>
+          <rect x="262" y="295" width="32" height="12" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3" rx="2"/>
+          <circle cx="220" cy="262" r="3" fill="#151214"/>
+          <circle cx="220" cy="285" r="3" fill="#151214"/>
+
+          <!-- Blazer Sleeves -->
+          ${sleeve !== "sleeveless" ? `
+            <path d="M130 178 L108 275 L118 355 L136 350 L128 275 L144 195 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+            <path d="M130 178 L108 275 L118 355 L136 350 L128 275 L144 195 Z" fill="url(#clothLighting)"/>
+            <path d="M130 178 L108 275 L118 355 L136 350 L128 275 L144 195 Z" fill="${patFill}" opacity="0.8"/>
+            <circle cx="126" cy="344" r="1.5" fill="#fff"/>
+            <circle cx="128" cy="348" r="1.5" fill="#fff"/>
+            <circle cx="130" cy="352" r="1.5" fill="#fff"/>
+
+            <path d="M310 178 L332 275 L322 355 L304 350 L312 275 L296 195 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+            <path d="M310 178 L332 275 L322 355 L304 350 L312 275 L296 195 Z" fill="url(#clothLighting)"/>
+            <path d="M310 178 L332 275 L322 355 L304 350 L312 275 L296 195 Z" fill="${patFill}" opacity="0.8"/>
+            <circle cx="314" cy="344" r="1.5" fill="#fff"/>
+            <circle cx="312" cy="348" r="1.5" fill="#fff"/>
+            <circle cx="310" cy="352" r="1.5" fill="#fff"/>
+          ` : `
+            <path d="M130 178 Q138 200 144 195" stroke="#d4af37" stroke-width="2.5" fill="none"/>
+            <path d="M310 178 Q302 200 296 195" stroke="#d4af37" stroke-width="2.5" fill="none"/>
+          `}
+        </g>
+      `;
+    } else if (garment === "linen_shirt") {
+      // 100% Pure Linen Mandarin Shirt & Chinos
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Chino Trousers -->
+          <path d="M148 290 L160 525 L190 525 L218 360 L222 360 L250 525 L280 525 L292 290 Z" fill="#d2be9b" stroke="#bbaa8b" stroke-width="1.5"/>
+
+          <!-- Linen Shirt Body -->
+          <path d="M132 178 Q220 162 308 178 L298 320 C265 328 175 328 142 320 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+          <path d="M132 178 Q220 162 308 178 L298 320 C265 328 175 328 142 320 Z" fill="url(#clothLighting)"/>
+          <path d="M132 178 Q220 162 308 178 L298 320 C265 328 175 328 142 320 Z" fill="${patFill}" opacity="0.8"/>
+
+          <!-- Grandad Mandarin Collar & Button Placket -->
+          <path d="M204 172 C212 166 228 166 236 172 L236 154 C228 150 212 150 204 154 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <rect x="217" y="170" width="6" height="145" fill="${color}" stroke="#000" stroke-width="0.8" stroke-opacity="0.2"/>
+          <circle cx="220" cy="184" r="2" fill="#fff"/>
+          <circle cx="220" cy="208" r="2" fill="#fff"/>
+          <circle cx="220" cy="232" r="2" fill="#fff"/>
+          <circle cx="220" cy="256" r="2" fill="#fff"/>
+          <circle cx="220" cy="280" r="2" fill="#fff"/>
+
+          <!-- Chest Pocket -->
+          <rect x="156" y="215" width="26" height="26" fill="${color}" stroke="#000" stroke-width="0.8" stroke-opacity="0.3" rx="2"/>
+
+          <!-- Sleeves -->
+          ${sleeve === "short" ? `
+            <path d="M132 178 L118 240 L138 242 L144 200 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+            <path d="M308 178 L322 240 L302 242 L296 200 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+          ` : sleeve === "sleeveless" ? "" : `
+            <path d="M132 178 L110 275 L120 355 L138 350 L130 275 L146 195 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+            <path d="M132 178 L110 275 L120 355 L138 350 L130 275 L146 195 Z" fill="url(#clothLighting)"/>
+            <path d="M132 178 L110 275 L120 355 L138 350 L130 275 L146 195 Z" fill="${patFill}" opacity="0.8"/>
+            <path d="M308 178 L330 275 L320 355 L302 350 L310 275 L294 195 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+            <path d="M308 178 L330 275 L320 355 L302 350 L310 275 L294 195 Z" fill="url(#clothLighting)"/>
+            <path d="M308 178 L330 275 L320 355 L302 350 L310 275 L294 195 Z" fill="${patFill}" opacity="0.8"/>
+          `}
+        </g>
+      `;
+    } else if (garment === "streetwear_tee") {
+      // Oversized Streetwear Graphic Tee & Baggy Cargo
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Baggy Cargo Pants with Pockets -->
+          <path d="M142 300 L150 525 L196 525 L218 360 L222 360 L244 525 L290 525 L298 300 Z" fill="#2d332d" stroke="#1d221d" stroke-width="1.5"/>
+          <rect x="144" y="380" width="22" height="32" fill="#252a25" rx="3" stroke="#3d443d" stroke-width="1"/>
+          <rect x="274" y="380" width="22" height="32" fill="#252a25" rx="3" stroke="#3d443d" stroke-width="1"/>
+
+          <!-- Dropped Shoulder Oversized Tee Body -->
+          <path d="M120 178 Q220 160 320 178 L310 330 C265 338 175 338 130 330 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M120 178 Q220 160 320 178 L310 330 C265 338 175 338 130 330 Z" fill="url(#clothLighting)"/>
+          <path d="M120 178 Q220 160 320 178 L310 330 C265 338 175 338 130 330 Z" fill="${patFill}" opacity="0.8"/>
+
+          <!-- Crewneck Collar -->
+          <path d="M200 174 Q220 188 240 174" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+
+          <!-- Streetwear Cyberpunk / Graphic Print -->
+          <rect x="180" y="215" width="80" height="42" fill="rgba(255,255,255,0.15)" rx="4"/>
+          <text x="220" y="238" text-anchor="middle" fill="#fff" font-size="11" font-weight="900" letter-spacing="2">DHWANI ✦ 26</text>
+          <text x="220" y="250" text-anchor="middle" fill="#ffe18b" font-size="7" font-weight="700" letter-spacing="1.5">TOKYO OVERSIZED</text>
+
+          <!-- Relaxed Dropped Sleeves -->
+          <path d="M120 178 L104 255 L132 258 L136 215 Z" fill="${color}"/>
+          <path d="M320 178 L336 255 L308 258 L304 215 Z" fill="${color}"/>
+        </g>
+      `;
+    } else if (garment === "bandhgala") {
+      // Royal Heritage Jodhpuri Bandhgala Suit
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Formal Black Trousers -->
+          <path d="M148 285 L160 525 L190 525 L218 360 L222 360 L250 525 L280 525 L292 285 Z" fill="#18161b" stroke="#000" stroke-width="1.5"/>
+
+          <!-- Bandhgala Jacket Body -->
+          <path d="M130 178 Q220 162 310 178 L302 355 C265 365 175 365 138 355 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M130 178 Q220 162 310 178 L302 355 C265 365 175 365 138 355 Z" fill="url(#clothLighting)"/>
+          <path d="M130 178 Q220 162 310 178 L302 355 C265 365 175 365 138 355 Z" fill="${patFill}" opacity="0.82"/>
+
+          <!-- High Closed Bandhgala Stand Collar with Gold Piping -->
+          <path d="M202 172 C210 166 230 166 238 172 L238 148 C230 144 210 144 202 148 Z" fill="${color}" stroke="#ffd700" stroke-width="2"/>
+
+          <!-- 5 Regal Antique Brass Crest Buttons -->
+          <line x1="220" y1="172" x2="220" y2="350" stroke="#ffd700" stroke-width="1" stroke-opacity="0.5"/>
+          <circle cx="220" cy="188" r="3.5" fill="#d4af37" stroke="#fff" stroke-width="0.8"/>
+          <circle cx="220" cy="214" r="3.5" fill="#d4af37" stroke="#fff" stroke-width="0.8"/>
+          <circle cx="220" cy="240" r="3.5" fill="#d4af37" stroke="#fff" stroke-width="0.8"/>
+          <circle cx="220" cy="266" r="3.5" fill="#d4af37" stroke="#fff" stroke-width="0.8"/>
+          <circle cx="220" cy="292" r="3.5" fill="#d4af37" stroke="#fff" stroke-width="0.8"/>
+
+          <!-- Breast Pocket with Maroon Silk Pocket Square -->
+          <rect x="154" y="212" width="28" height="6" fill="${color}" stroke="#ffd700" stroke-width="1"/>
+          <polygon points="160,212 168,198 176,212" fill="#881337"/>
+
+          <!-- Tailored Sleeves -->
+          <path d="M130 178 L108 275 L118 355 L136 350 L128 275 L144 195 Z" fill="${color}"/>
+          <path d="M130 178 L108 275 L118 355 L136 350 L128 275 L144 195 Z" fill="url(#clothLighting)"/>
+          <path d="M310 178 L332 275 L322 355 L304 350 L312 275 L296 195 Z" fill="${color}"/>
+          <path d="M310 178 L332 275 L322 355 L304 350 L312 275 L296 195 Z" fill="url(#clothLighting)"/>
+        </g>
+      `;
+    } else {
+      // Default: Lucknowi / Festive Kurta Pyjama Set or Indo-Western Cowl Dhoti
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Pyjama / Churidar Pants -->
+          <path d="M160 355 L174 525 L196 525 L215 375 L225 375 L244 525 L266 525 L280 355 Z" fill="#f8f4ee" stroke="#ded4c8" stroke-width="1.5"/>
+          <path d="M176 430 Q185 435 194 430 M246 430 Q255 435 264 430" stroke="#cdbead" stroke-width="1.2" fill="none"/>
+
+          <!-- Kurta Body with Side Slits -->
+          <path d="M132 178 Q220 162 308 178 L314 415 C270 425 170 425 126 415 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M132 178 Q220 162 308 178 L314 415 C270 425 170 425 126 415 Z" fill="url(#clothLighting)"/>
+          <path d="M132 178 Q220 162 308 178 L314 415 C270 425 170 425 126 415 Z" fill="${patFill}" opacity="0.82"/>
+
+          <!-- Side Slit Indicators -->
+          <line x1="140" y1="330" x2="140" y2="415" stroke="#000" stroke-width="1.5" opacity="0.35"/>
+          <line x1="300" y1="330" x2="300" y2="415" stroke="#000" stroke-width="1.5" opacity="0.35"/>
+
+          <!-- Nehru Stand Collar & Buttons -->
+          <path d="M202 172 C210 167 230 167 238 172 L238 152 C230 148 210 148 202 152 Z" fill="${color}" stroke="#d4af37" stroke-width="1.5"/>
+          <rect x="216" y="170" width="8" height="95" fill="${color}" stroke="#d4af37" stroke-width="1"/>
+          <circle cx="220" cy="182" r="2.5" fill="#ffd700"/>
+          <circle cx="220" cy="202" r="2.5" fill="#ffd700"/>
+          <circle cx="220" cy="222" r="2.5" fill="#ffd700"/>
+          <circle cx="220" cy="242" r="2.5" fill="#ffd700"/>
+
+          <!-- Chest Pocket with Silk Square -->
+          <rect x="156" y="210" width="28" height="24" fill="${color}" stroke="#d4af37" stroke-width="1" rx="2"/>
+          <polygon points="162,210 170,198 178,210" fill="#ffd700" opacity=".9"/>
+
+          <!-- Sleeves matching selected styling -->
+          ${sleeve === "sleeveless" ? `
+            <path d="M132 178 Q140 200 146 195" stroke="#d4af37" stroke-width="3" fill="none"/>
+            <path d="M308 178 Q300 200 294 195" stroke="#d4af37" stroke-width="3" fill="none"/>
+          ` : sleeve === "short" ? `
+            <path d="M132 178 L118 240 L138 244 L146 200 Z" fill="${color}"/>
+            <path d="M308 178 L322 240 L302 244 L294 200 Z" fill="${color}"/>
+          ` : sleeve === "threequarter" ? `
+            <path d="M132 178 L114 285 L128 290 L146 200 Z" fill="${color}"/>
+            <path d="M308 178 L326 285 L312 290 L294 200 Z" fill="${color}"/>
+          ` : `
+            <path d="M132 178 L110 275 L120 360 L138 355 L130 275 L146 200 Z" fill="${color}"/>
+            <path d="M132 178 L110 275 L120 360 L138 355 L130 275 L146 200 Z" fill="url(#clothLighting)"/>
+            <path d="M132 178 L110 275 L120 360 L138 355 L130 275 L146 200 Z" fill="${patFill}" opacity="0.8"/>
+            <path d="M308 178 L330 275 L320 360 L302 355 L310 275 L294 200 Z" fill="${color}"/>
+            <path d="M308 178 L330 275 L320 360 L302 355 L310 275 L294 200 Z" fill="url(#clothLighting)"/>
+            <path d="M308 178 L330 275 L320 360 L302 355 L310 275 L294 200 Z" fill="${patFill}" opacity="0.8"/>
+          `}
+        </g>
+      `;
+    }
+  } else if (group === "kid") {
+    // ----------------------------------------------------
+    // ACTUAL KIDS BOUTIQUE DISPLAY MANNEQUIN STATUE (CHILD SCALE)
+    // ----------------------------------------------------
+    statueHTML = `
+      <g id="svgMannequinStatue">
+        <!-- Elevated Plinth for Child Display -->
+        <rect x="216" y="320" width="8" height="240" fill="url(#chromePoleGrad)"/>
+
+        <!-- Mini Polished Cap & Cute Rounded Child Head -->
+        <ellipse cx="220" cy="165" rx="10" ry="4" fill="url(#chromeTrimGrad)"/>
+        <path d="M220 165 C238 165 250 180 250 200 C250 224 238 238 226 242 L214 242 C202 238 190 224 190 200 C190 180 202 165 220 165 Z" fill="url(#kidDummySkin)" stroke="#c5aba0" stroke-width="1.5"/>
+
+        <!-- Child Neck & Soft Narrow Shoulders -->
+        <path d="M208 240 L207 260 C215 262 225 262 233 260 L232 240 Z" fill="url(#kidDummySkin)" stroke="#c5aba0" stroke-width="1.5"/>
+        <ellipse cx="164" cy="264" rx="7" ry="9" fill="url(#chromeTrimGrad)"/>
+        <ellipse cx="276" cy="264" rx="7" ry="9" fill="url(#chromeTrimGrad)"/>
+
+        <!-- Child Torso -->
+        <path d="M164 264 C185 256 255 256 276 264 L268 360 C242 368 198 368 172 360 Z" fill="url(#kidDummySkin)" stroke="#c5aba0" stroke-width="1.5"/>
+
+        <!-- Cute Child Arms & Legs -->
+        <path d="M164 264 L152 320 L160 365 L170 362 L164 320 L174 275 Z" fill="url(#kidDummySkin)" stroke="#c5aba0" stroke-width="1.5"/>
+        <path d="M276 264 L288 320 L280 365 L270 362 L276 320 L266 275 Z" fill="url(#kidDummySkin)" stroke="#c5aba0" stroke-width="1.5"/>
+        <path d="M176 360 L184 485 L200 485 L212 365 Z" fill="url(#kidDummySkin)" stroke="#c5aba0" stroke-width="1.5"/>
+        <path d="M228 365 L240 485 L256 485 L264 360 Z" fill="url(#kidDummySkin)" stroke="#c5aba0" stroke-width="1.5"/>
+      </g>
+    `;
+
+    // KID GARMENTS
+    if (garment === "kid_frock") {
+      // Princess Party Ball Frock
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Rounded Child Bodice -->
+          <path d="M166 264 C185 256 255 256 274 264 L264 315 C240 320 200 320 176 315 Z" fill="${color}" stroke="#000" stroke-width="0.8" stroke-opacity="0.2"/>
+          <path d="M166 264 C185 256 255 256 274 264 L264 315 C240 320 200 320 176 315 Z" fill="url(#clothLighting)"/>
+          <path d="M166 264 C185 256 255 256 274 264 L264 315 C240 320 200 320 176 315 Z" fill="${patFill}" opacity="0.85"/>
+
+          <!-- Satin Bow at Waist -->
+          <rect x="174" y="312" width="92" height="6" fill="#ffd700" rx="2"/>
+          <polygon points="214,310 220,318 226,310 220,314" fill="#ffd700"/>
+
+          <!-- Multi-tier Flared Party Tulle Skirt -->
+          <path d="M174 316 C190 318 250 318 266 316 L310 440 C270 455 170 455 130 440 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+          <path d="M174 316 C190 318 250 318 266 316 L310 440 C270 455 170 455 130 440 Z" fill="url(#clothLighting)"/>
+          <path d="M174 316 C190 318 250 318 266 316 L310 440 C270 455 170 455 130 440 Z" fill="${patFill}" opacity="0.85"/>
+
+          <!-- Flounce / Tier Ruffles -->
+          <path d="M148 375 Q220 395 292 375" fill="none" stroke="#fff" stroke-width="3" opacity=".6"/>
+          <path d="M130 440 Q220 455 310 440" fill="none" stroke="#ffd700" stroke-width="4"/>
+
+          <!-- Flutter Short Sleeves -->
+          <path d="M166 264 Q152 285 162 295" stroke="#ffd700" stroke-width="3" fill="none"/>
+          <path d="M274 264 Q288 285 278 295" stroke="#ffd700" stroke-width="3" fill="none"/>
+        </g>
+      `;
+    } else if (garment === "kid_playsuit") {
+      // Cotton Dungaree / Playsuit
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Inner Striped Tee -->
+          <path d="M164 264 Q220 255 276 264 L268 330 L172 330 Z" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+          <path d="M164 264 Q220 255 276 264 L268 330 L172 330 Z" fill="url(#stripesPat)"/>
+
+          <!-- Dungaree Bib & Overall Straps -->
+          <polygon points="172,264 180,264 184,310 176,310" fill="${color}"/>
+          <polygon points="268,264 260,264 256,310 264,310" fill="${color}"/>
+          <circle cx="180" cy="308" r="2.5" fill="#d4af37"/>
+          <circle cx="260" cy="308" r="2.5" fill="#d4af37"/>
+
+          <!-- Front Center Bib -->
+          <rect x="184" y="295" width="72" height="30" fill="${color}" stroke="#000" stroke-width="0.8" stroke-opacity="0.3" rx="2"/>
+          <!-- Bib Pocket -->
+          <rect x="202" y="305" width="36" height="16" fill="${color}" stroke="#ffd700" stroke-width="1" rx="2"/>
+
+          <!-- Dungaree Shorts -->
+          <path d="M170 325 L164 395 L204 395 L218 350 L222 350 L236 395 L276 395 L270 325 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M170 325 L164 395 L204 395 L218 350 L222 350 L236 395 L276 395 L270 325 Z" fill="url(#clothLighting)"/>
+          <path d="M170 325 L164 395 L204 395 L218 350 L222 350 L236 395 L276 395 L270 325 Z" fill="${patFill}" opacity="0.8"/>
+        </g>
+      `;
+    } else {
+      // Default: Kids Festive Kurta & Nehru Waistcoat Set
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Kid Pyjama Pants -->
+          <path d="M174 355 L182 485 L202 485 L215 370 L225 370 L238 485 L258 485 L266 355 Z" fill="#f8f4ee" stroke="#ded4c8" stroke-width="1.5"/>
+
+          <!-- Inner Kurta Body -->
+          <path d="M166 264 Q220 256 274 264 L270 380 Q220 386 170 380 Z" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+
+          <!-- Open Nehru Waistcoat / Jacket on Top -->
+          <path d="M164 264 Q220 256 276 264 L272 360 C245 365 195 365 168 360 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M164 264 Q220 256 276 264 L272 360 C245 365 195 365 168 360 Z" fill="url(#clothLighting)"/>
+          <path d="M164 264 Q220 256 276 264 L272 360 C245 365 195 365 168 360 Z" fill="${patFill}" opacity="0.85"/>
+
+          <!-- Nehru Collar & Gold Buttons -->
+          <path d="M206 258 C212 254 228 254 234 258 L234 245 C228 242 212 242 206 245 Z" fill="${color}" stroke="#d4af37" stroke-width="1.5"/>
+          <circle cx="220" cy="275" r="2.5" fill="#ffd700"/>
+          <circle cx="220" cy="295" r="2.5" fill="#ffd700"/>
+          <circle cx="220" cy="315" r="2.5" fill="#ffd700"/>
+          <circle cx="220" cy="335" r="2.5" fill="#ffd700"/>
+
+          <!-- Mini Pocket Square -->
+          <rect x="180" y="285" width="20" height="4" fill="${color}" stroke="#ffd700" stroke-width="1"/>
+          <polygon points="184,285 190,274 196,285" fill="#d4af37"/>
+
+          <!-- Sleeves -->
+          <path d="M166 264 L152 320 L160 365 L170 362 L164 320 L174 275 Z" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+          <path d="M274 264 L288 320 L280 365 L270 362 L276 320 L266 275 Z" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+        </g>
+      `;
+    }
+  } else if (group === "senior") {
+    // ----------------------------------------------------
+    // ACTUAL SENIOR ELEGANCE DISPLAY MANNEQUIN STATUE
+    // ----------------------------------------------------
+    statueHTML = `
+      <g id="svgMannequinStatue">
+        <!-- Finial Cap & Mature Mannequin Head -->
+        <ellipse cx="220" cy="62" rx="13" ry="5" fill="url(#chromeTrimGrad)"/>
+        <path d="M220 62 C242 62 252 78 252 105 C252 130 238 143 226 148 L214 148 C202 143 188 130 188 105 C188 78 198 62 220 62 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+        <path d="M206 145 L204 174 C214 177 226 177 236 174 L234 145 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+
+        <!-- Relaxed Shoulders & Comfort Torso -->
+        <ellipse cx="132" cy="180" rx="9" ry="12" fill="url(#chromeTrimGrad)"/>
+        <ellipse cx="308" cy="180" rx="9" ry="12" fill="url(#chromeTrimGrad)"/>
+        <path d="M132 180 C165 170 275 170 308 180 L296 290 C265 300 175 300 144 290 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+
+        <!-- Relaxed Waist & Pelvis -->
+        <path d="M144 290 L148 358 C185 368 255 368 292 358 L296 290 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+
+        <!-- Arms & Legs -->
+        <path d="M132 180 L114 275 L124 360 L138 355 L132 275 L146 200 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+        <path d="M308 180 L326 275 L316 360 L302 355 L308 275 L294 200 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+        <path d="M162 358 L174 525 L196 525 L212 365 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+        <path d="M228 365 L244 525 L266 525 L278 358 Z" fill="url(#seniorDummySkin)" stroke="#b39e92" stroke-width="1.5"/>
+      </g>
+    `;
+
+    // SENIOR GARMENTS: Pure Khadi Comfort Kurta, Tunic, Linen Shirt, Dhoti
+    garmentHTML = `
+      <g id="svgGarmentLayer">
+        <!-- Loose Comfort Drawstring Pyjamas -->
+        <path d="M156 350 L168 525 L200 525 L216 375 L224 375 L240 525 L272 525 L284 350 Z" fill="#faf6f0" stroke="#ded8cc" stroke-width="1.5"/>
+
+        <!-- Pure Khadi Relaxed Kurta Body -->
+        <path d="M130 178 Q220 164 310 178 L314 425 C270 432 170 432 126 425 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+        <path d="M130 178 Q220 164 310 178 L314 425 C270 432 170 432 126 425 Z" fill="url(#clothLighting)"/>
+        <path d="M130 178 Q220 164 310 178 L314 425 C270 432 170 432 126 425 Z" fill="${patFill}" opacity="0.8"/>
+
+        <!-- Soft Collar & Wooden Buttons -->
+        <path d="M202 172 C210 167 230 167 238 172 L238 155 C230 150 210 150 202 155 Z" fill="${color}" stroke="#000" stroke-width="0.8" stroke-opacity="0.3"/>
+        <rect x="217" y="170" width="6" height="110" fill="${color}" stroke="#000" stroke-width="0.8" stroke-opacity="0.3"/>
+        <circle cx="220" cy="186" r="3" fill="#8b5a2b"/>
+        <circle cx="220" cy="210" r="3" fill="#8b5a2b"/>
+        <circle cx="220" cy="234" r="3" fill="#8b5a2b"/>
+        <circle cx="220" cy="258" r="3" fill="#8b5a2b"/>
+
+        <!-- Loose Sleeves -->
+        <path d="M130 178 L110 275 L120 355 L138 350 L130 275 L146 195 Z" fill="${color}"/>
+        <path d="M130 178 L110 275 L120 355 L138 350 L130 275 L146 195 Z" fill="url(#clothLighting)"/>
+        <path d="M310 178 L330 275 L320 355 L302 350 L310 275 L294 195 Z" fill="${color}"/>
+        <path d="M310 178 L330 275 L320 355 L302 350 L310 275 L294 195 Z" fill="url(#clothLighting)"/>
+      </g>
+    `;
+  } else {
+    // ----------------------------------------------------
+    // ACTUAL FEMALE BOUTIQUE DISPLAY MANNEQUIN STATUE
+    // ----------------------------------------------------
+    statueHTML = `
+      <g id="svgMannequinStatue">
+        <!-- Finial Cap & Sculpted High-Fashion Mannequin Head -->
+        <ellipse cx="220" cy="65" rx="12" ry="4.5" fill="url(#roseGoldGrad)"/>
+        <path d="M220 65 C238 65 248 82 248 105 C248 128 236 140 226 146 L214 146 C204 140 192 128 192 105 C192 82 202 65 220 65 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+
+        <!-- Slender Graceful Neck & Clavicle -->
+        <path d="M208 144 L207 175 C215 178 225 178 233 175 L232 144 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+        <path d="M185 180 Q220 192 255 180" fill="none" stroke="rgba(140, 80, 80, 0.2)" stroke-width="1.5"/>
+
+        <!-- Sloping Shoulders & Rose Gold Discs -->
+        <ellipse cx="146" cy="182" rx="8" ry="11" fill="url(#roseGoldGrad)"/>
+        <ellipse cx="294" cy="182" rx="8" ry="11" fill="url(#roseGoldGrad)"/>
+
+        <!-- Bustline & Upper Torso -->
+        <path d="M146 182 C178 170 262 170 294 182 C288 220 282 248 270 258 C252 270 188 270 170 258 C158 248 152 220 146 182 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+        <path d="M174 228 Q196 244 220 236 Q244 244 266 228" fill="none" stroke="rgba(140, 80, 80, 0.24)" stroke-width="1.5"/>
+
+        <!-- Contoured Narrow Hourglass Waist & Flared Hips -->
+        <path d="M170 258 C173 280 172 290 160 320 C150 345 158 360 172 365 L268 365 C282 360 290 345 280 320 C268 290 267 280 270 258 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+
+        <!-- Slender Mannequin Arms & Hands -->
+        <path d="M146 182 L132 275 L140 360 L154 356 L150 275 L162 205 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+        <path d="M294 182 L308 275 L300 360 L286 356 L290 275 L278 205 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+        <ellipse cx="142" cy="368" rx="5" ry="10" fill="url(#femaleDummySkin)"/>
+        <ellipse cx="298" cy="368" rx="5" ry="10" fill="url(#femaleDummySkin)"/>
+
+        <!-- Slender Legs Mounted to Chrome Pole -->
+        <path d="M172 365 L182 525 L198 525 L212 375 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+        <path d="M228 375 L242 525 L258 525 L268 365 Z" fill="url(#femaleDummySkin)" stroke="#b89a8e" stroke-width="1.5"/>
+      </g>
+    `;
+
+    // FEMALE GARMENTS
+    if (garment === "kurta_palazzo") {
+      // Lucknowi Chikankari Kurta & Palazzo Set
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Wide-Leg Palazzo Pants -->
+          <path d="M152 320 L130 515 L195 515 L215 365 L225 365 L245 515 L310 515 L288 320 Z" fill="#fcf6ee" stroke="#dfd4c5" stroke-width="1.5"/>
+          <path d="M130 500 H195 M245 500 H310" stroke="#ffd700" stroke-width="3"/>
+
+          <!-- Straight-Cut Lucknowi Kurta Body with Side Slits -->
+          <path d="M146 182 Q220 168 294 182 L298 420 C265 428 175 428 142 420 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+          <path d="M146 182 Q220 168 294 182 L298 420 C265 428 175 428 142 420 Z" fill="url(#clothLighting)"/>
+          <path d="M146 182 Q220 168 294 182 L298 420 C265 428 175 428 142 420 Z" fill="${patFill}" opacity="0.82"/>
+
+          <!-- Keyhole Neckline & Delicate Yoke Embroidery -->
+          <circle cx="220" cy="186" r="4" fill="none" stroke="#ffd700" stroke-width="2"/>
+          <line x1="220" y1="190" x2="220" y2="245" stroke="#ffd700" stroke-width="1.5"/>
+          <polygon points="204,180 236,180 226,245 214,245" fill="none" stroke="#ffd700" stroke-width="1" stroke-dasharray="3,3"/>
+
+          <!-- Sleeves -->
+          ${sleeve === "sleeveless" ? `
+            <path d="M146 182 Q154 205 162 205" stroke="#ffd700" stroke-width="2.5" fill="none"/>
+            <path d="M294 182 Q286 205 278 205" stroke="#ffd700" stroke-width="2.5" fill="none"/>
+          ` : `
+            <path d="M146 182 L130 275 L138 355 L152 352 L148 275 L160 205 Z" fill="${color}"/>
+            <path d="M146 182 L130 275 L138 355 L152 352 L148 275 L160 205 Z" fill="url(#clothLighting)"/>
+            <path d="M294 182 L310 275 L302 355 L288 352 L292 275 L280 205 Z" fill="${color}"/>
+            <path d="M294 182 L310 275 L302 355 L288 352 L292 275 L280 205 Z" fill="url(#clothLighting)"/>
+          `}
+        </g>
+      `;
+    } else if (garment === "lehenga") {
+      // Royal Velvet Sangeet Lehenga Choli
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Cropped Choli Blouse with Gold Dori Trim -->
+          <path d="M146 182 C178 170 262 170 294 182 L284 250 C250 258 190 258 156 250 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M146 182 C178 170 262 170 294 182 L284 250 C250 258 190 258 156 250 Z" fill="url(#clothLighting)"/>
+          <path d="M146 182 C178 170 262 170 294 182 L284 250 C250 258 190 258 156 250 Z" fill="${patFill}" opacity="0.85"/>
+          <path d="M188 178 Q220 202 252 178" fill="none" stroke="#ffd700" stroke-width="3"/>
+          <path d="M156 250 Q220 260 284 250" stroke="#ffd700" stroke-width="3" fill="none"/>
+
+          <!-- Grand Flared Lehenga Skirt -->
+          <path d="M165 285 Q220 295 275 285 L355 515 Q220 535 85 515 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M165 285 Q220 295 275 285 L355 515 Q220 535 85 515 Z" fill="url(#clothLighting)"/>
+          <path d="M165 285 Q220 295 275 285 L355 515 Q220 535 85 515 Z" fill="${patFill}" opacity="0.85"/>
+
+          <!-- Ornate Gold Zari Waistband & Vertical Pleats -->
+          <rect x="165" y="282" width="110" height="8" fill="#ffd700" rx="2"/>
+          <path d="M180 290 Q155 390 140 516" stroke="rgba(0,0,0,0.3)" stroke-width="2" fill="none"/>
+          <path d="M205 292 Q200 390 195 518" stroke="rgba(0,0,0,0.25)" stroke-width="2" fill="none"/>
+          <path d="M235 292 Q240 390 245 518" stroke="rgba(0,0,0,0.25)" stroke-width="2" fill="none"/>
+          <path d="M260 290 Q285 390 300 516" stroke="rgba(0,0,0,0.3)" stroke-width="2" fill="none"/>
+          <path d="M85 515 Q220 535 355 515" stroke="#ffd700" stroke-width="8" fill="none"/>
+
+          <!-- Translucent Net Dupatta Drape over left shoulder -->
+          <path d="M140 182 L120 380 Q145 420 180 360 L195 210 Z" fill="#ffd700" opacity="0.35"/>
+
+          <!-- Choli Sleeves -->
+          <path d="M146 182 L136 240 L154 242 L160 205 Z" fill="${color}"/>
+          <path d="M294 182 L304 240 L286 242 L280 205 Z" fill="${color}"/>
+        </g>
+      `;
+    } else {
+      // Default: Fluid Designer Anarkali / Flare Maxi Gown
+      garmentHTML = `
+        <g id="svgGarmentLayer">
+          <!-- Fitted Bodice with Sweetheart Neck -->
+          <path d="M146 182 C178 170 262 170 294 182 L278 265 C250 274 190 274 162 265 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.2"/>
+          <path d="M146 182 C178 170 262 170 294 182 L278 265 C250 274 190 274 162 265 Z" fill="url(#clothLighting)"/>
+          <path d="M146 182 C178 170 262 170 294 182 L278 265 C250 274 190 274 162 265 Z" fill="${patFill}" opacity="0.82"/>
+
+          <!-- Sweetheart Neckline Trim & Waist Belt -->
+          <path d="M190 178 Q220 202 250 178" fill="none" stroke="#ffd700" stroke-width="3" stroke-linecap="round"/>
+          <rect x="162" y="262" width="116" height="8" fill="#d4af37" rx="2"/>
+          <circle cx="220" cy="266" r="3" fill="#fff"/>
+
+          <!-- Grand Flared Anarkali Skirt -->
+          <path d="M162 270 Q220 278 278 270 L355 505 Q220 525 85 505 Z" fill="${color}" stroke="#000" stroke-width="1" stroke-opacity="0.3"/>
+          <path d="M162 270 Q220 278 278 270 L355 505 Q220 525 85 505 Z" fill="url(#clothLighting)"/>
+          <path d="M162 270 Q220 278 278 270 L355 505 Q220 525 85 505 Z" fill="${patFill}" opacity="0.82"/>
+
+          <!-- Vertical Pleat Panels -->
+          <path d="M180 272 Q160 380 145 506" stroke="rgba(0,0,0,0.3)" stroke-width="2" fill="none"/>
+          <path d="M205 274 Q200 380 195 508" stroke="rgba(0,0,0,0.25)" stroke-width="2" fill="none"/>
+          <path d="M235 274 Q240 380 245 508" stroke="rgba(0,0,0,0.25)" stroke-width="2" fill="none"/>
+          <path d="M260 272 Q280 380 295 506" stroke="rgba(0,0,0,0.3)" stroke-width="2" fill="none"/>
+          <path d="M85 505 Q220 525 355 505" stroke="#ffd700" stroke-width="6" fill="none"/>
+
+          <!-- Sleeves matching selected styling -->
+          ${sleeve === "sleeveless" ? `
+            <path d="M146 182 Q154 205 162 205" stroke="#ffd700" stroke-width="2.5" fill="none"/>
+            <path d="M294 182 Q286 205 278 205" stroke="#ffd700" stroke-width="2.5" fill="none"/>
+          ` : sleeve === "short" ? `
+            <path d="M146 182 L136 240 L154 242 L160 205 Z" fill="${color}"/>
+            <path d="M294 182 L304 240 L286 242 L280 205 Z" fill="${color}"/>
+          ` : sleeve === "threequarter" ? `
+            <path d="M146 182 L132 285 L148 288 L160 205 Z" fill="${color}"/>
+            <path d="M294 182 L308 285 L292 288 L280 205 Z" fill="${color}"/>
+          ` : `
+            <path d="M146 182 L130 275 L138 355 L152 352 L148 275 L160 205 Z" fill="${color}"/>
+            <path d="M146 182 L130 275 L138 355 L152 352 L148 275 L160 205 Z" fill="url(#clothLighting)"/>
+            <path d="M146 182 L130 275 L138 355 L152 352 L148 275 L160 205 Z" fill="${patFill}" opacity="0.8"/>
+            <path d="M294 182 L310 275 L302 355 L288 352 L292 275 L280 205 Z" fill="${color}"/>
+            <path d="M294 182 L310 275 L302 355 L288 352 L292 275 L280 205 Z" fill="url(#clothLighting)"/>
+            <path d="M294 182 L310 275 L302 355 L288 352 L292 275 L280 205 Z" fill="${patFill}" opacity="0.8"/>
+          `}
+        </g>
+      `;
+    }
+  }
+
+  return defsHTML + standHTML + statueHTML + garmentHTML;
+}
+
+function addCustomStudioDesignToCart() {
+  const name = document.getElementById("studioProjectName").value.trim() || "Custom Tailored Look";
+  const budget = Number(document.getElementById("studioBudget").value) || 2499;
+  const fabric = document.getElementById("studioFabric").value;
+  const model = document.getElementById("studioModel").value;
+  const garmentSelect = document.getElementById("studioGarment");
+  const garmentName = garmentSelect && garmentSelect.options[garmentSelect.selectedIndex] ? garmentSelect.options[garmentSelect.selectedIndex].text : "Custom Design";
+  const notes = document.getElementById("studioNotes").value.trim();
+
+  let modelLabel = "Adult Woman (Female Statue)";
+  if (model === "man") modelLabel = "Adult Man (Male Statue)";
+  else if (model === "kid") modelLabel = "Kid / Child (Kid Statue)";
+  else if (model === "senior") modelLabel = "Senior Elegance (Senior Statue)";
+  else if (model === "teen_boy") modelLabel = "Teen Boy (Male Statue)";
+  else if (model === "teen_girl") modelLabel = "Teen Girl (Female Statue)";
+
+  // Create virtual custom product
+  const customProduct = {
+    id: 999000 + Math.floor(Math.random() * 999),
+    name: `Custom Tailored: ${name} (${garmentName})`,
+    category: "Custom Studio",
+    price: budget,
+    mrp: Math.round(budget * 1.35),
+    image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80",
+    description: `Bespoke tailoring in ${fabric} for ${modelLabel}. Color: ${currentStudioColor}. Notes: ${notes || "Standard boutique mannequin fit"}`,
+    badge: "✂️ Bespoke Tailored"
+  };
+
+  cart.push({
+    product: customProduct,
+    size: "Custom Fit (" + modelLabel + ")",
+    qty: 1
+  });
+
+  updateHeaderBadges();
+  showToast(`Custom outfit '${name}' added to your bag!`);
+  openCartModal();
+}
+
+function generateTailorBrief() {
+  const name = document.getElementById("studioProjectName").value.trim() || "My Bespoke Look";
+  const model = document.getElementById("studioModel").value;
+  const garmentSelect = document.getElementById("studioGarment");
+  const garmentName = garmentSelect && garmentSelect.options[garmentSelect.selectedIndex] ? garmentSelect.options[garmentSelect.selectedIndex].text : "Custom Design";
+  const pattern = document.getElementById("studioPattern").value;
+  const sleeve = document.getElementById("studioSleeve").value;
+  const fabric = document.getElementById("studioFabric").value;
+  const budget = document.getElementById("studioBudget").value;
+  const notes = document.getElementById("studioNotes").value.trim();
+
+  let modelProfile = "ADULT WOMAN (FEMALE STATUE FIT)";
+  if (model === "man") modelProfile = "ADULT MAN (MALE STATUE FIT)";
+  else if (model === "kid") modelProfile = "KID / CHILD (KID STATUE FIT)";
+  else if (model === "senior") modelProfile = "SENIOR ELEGANCE (SENIOR STATUE FIT)";
+  else if (model === "teen_boy") modelProfile = "TEEN BOY (MALE STATUE FIT)";
+  else if (model === "teen_girl") modelProfile = "TEEN GIRL (FEMALE STATUE FIT)";
+
+  const brief = `================================================
+DHWANI BOUTIQUE & TAILOR SPECIFICATION BRIEF
+================================================
+PROJECT NAME: ${name}
+CLIENT MANNEQUIN PROFILE: ${modelProfile}
+TAILORED GARMENT: ${garmentName}
+FABRIC SELECTED: ${fabric}
+PRINT / EMBROIDERY: ${pattern}
+SLEEVE CUT: ${sleeve.toUpperCase()}
+COLOR ACCENT: ${currentStudioColor}
+TARGET TAILORING BUDGET: ${formatINR(budget)}
+
+SPECIAL TAILORING INSTRUCTIONS & MEASUREMENTS:
+${notes ? notes : "Standard Indian comfort ease, 1.5-inch inner fabric margins for future alteration."}
+
+STORE CONTACT:
+Dhwani Fashion Studio Helpline: +91 98765 43210
+================================================`;
+
+  document.getElementById("tailorBriefContent").value = brief;
+  document.getElementById("briefModal").classList.add("open");
+}
+
+function initStudio() {
+  const modelSelect = document.getElementById("studioModel");
+  const initialModel = modelSelect ? modelSelect.value : "woman";
+  onStudioModelChange(initialModel);
+}
+
+function closeBriefModal() {
+  document.getElementById("briefModal").classList.remove("open");
+}
+
+async function copyBriefText() {
+  const textarea = document.getElementById("tailorBriefContent");
+  try {
+    await navigator.clipboard.writeText(textarea.value);
+    showToast("📋 Design brief copied to clipboard!");
+  } catch (err) {
+    textarea.select();
+    showToast("Please copy the selected text.");
+  }
+}
+
+/* ============================================================
+   14. APP INITIALIZATION & EVENT BINDINGS
+============================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  updateHeaderBadges();
+  renderCatalog();
+  initStudio();
+
+  // Search input listeners
+  document.getElementById("catalogSearch").addEventListener("input", renderCatalog);
+
+  // Close modals on escape key
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      closeCartModal();
+      closeDetailsModal();
+      closeWishlistModal();
+      closeSupportModal();
+      closeBriefModal();
+    }
+  });
+
+  // Close modal when clicking outside
+  document.querySelectorAll(".modal-overlay").forEach(overlay => {
+    overlay.addEventListener("click", e => {
+      if (e.target === overlay) {
+        overlay.classList.remove("open");
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
